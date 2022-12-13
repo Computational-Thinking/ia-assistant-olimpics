@@ -49,5 +49,5 @@ connections3 = [
 // solution is 2
 
 function minimumHospitals(N, P, connections) {
-
+  // find the diameter of the connections graph
 }
