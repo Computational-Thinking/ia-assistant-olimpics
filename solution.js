@@ -50,4 +50,5 @@ connections3 = [
 
 function minimumHospitals(N, P, connections) {
   // find the diameter of the connections graph
+  // the diameter is the longest path between two nodes
 }
