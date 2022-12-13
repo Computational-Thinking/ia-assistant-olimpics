@@ -4,7 +4,7 @@
 // The problem is: What is the minimum number of hospitals needed?
 // Write a function that, given the number of islands N, the number of bridges P, and the connections array between the islands,
 // returns the minimum number of hospitals needed.
-// The connections arrays  consist of an array of P  pairs [x, y], with x not equal to y, containing the islands connected by each bridge. 
+// The connections array  consist of an array of P  pairs [x, y], with x not equal to y, containing the islands connected by each bridge. 
 // Assume N is greater than 1 and less or equal to 105, 
 // Assumen P is between 0 and N, 
 // Assume that the islands are natural numbers numbered from 0, and 
