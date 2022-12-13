@@ -22,7 +22,7 @@ const connections = [
   [7, 8],
   [8, 9],
 ]
-// solution 5
+// solution is 5
 
 // example 2
 connections2 = [
@@ -36,7 +36,7 @@ connections2 = [
   [4, 1],
   [5, 1],
 ]
-// solution 3
+// solution is 3
 
 // example 3
 connections3 = [
@@ -46,7 +46,7 @@ connections3 = [
   [1, 3],
   [1, 4],  
 ]
-// solution 2
+// solution is 2
 
 function minimumHospitals(N, P, connections) {
 
