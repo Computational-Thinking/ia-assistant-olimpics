@@ -153,3 +153,36 @@ Coloring island 0 with color 0. numHospitals=1
 colors=[0,0,1,0,1,1,1,1,0]
 1
 ```
+
+## Third instance
+
+The third given instance is:
+
+```
+5 4
+0 2
+2 1
+1 3
+1 4
+```
+whose graph is:
+
+```mermaid
+graph LR
+    0((0)) <--> 2((2))
+    2((2)) <--> 1((1))
+    1((1)) <--> 3((3))
+    1((1)) <--> 4((4))
+```
+
+and whose solution is 2.
+
+The execution gives:
+
+```
+➜  P31958_es git:(understanding-2nd-attempt) ✗ node chat-gpt3-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]
+Coloring island 0 with color 0. numHospitals=1
+colors=[0,0,1,1,1]
+1
+```
