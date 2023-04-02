@@ -61,6 +61,7 @@ function readInputFile(inputFile) {
   const lines = input.split('\n').map(line => line.trim());
   const [n, p] = lines[0].split(' ').map(Number);
   const edges = lines.slice(1).map(line => line.split(' ').map(Number));
+  console.log(`n = ${n}, p = ${p}, edges = ${JSON.stringify(edges)}`)
   return [n, p, edges];
 }
 
