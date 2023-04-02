@@ -60,3 +60,21 @@ graph LR
 
 We realize that there is no solution with 4 hospitals and we need 5 to hold the restriction 
 **They want to build hospitals so that no one has to cross more than one bridge to get to a hospital**
+
+Let us see the function `colorIsland(island, color)`:
+
+```js 
+// Función auxiliar para asignar un color a una isla y sus vecinas
+  function colorIsland(island, color) {
+    colors[island] = color;
+    for (const [i, j] of edges) {
+      if (i === island && colors[j] === -1) {
+        colorIsland(j, 1 - color); // Asignar un color distinto al de la isla adyacente
+      } else if (j === island && colors[i] === -1) {
+        colorIsland(i, 1 - color); // Asignar un color distinto al de la isla adyacente
+      }
+    }
+  }
+```
+
+It traverses the `edges` array looking for edges starting or finishing in the `island` and if the island on the other side of the bridge has not been colored it assigns `1 - color` ( a different color) to the neighbor island. 

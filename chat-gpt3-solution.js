@@ -61,6 +61,7 @@ function readInputFile(inputFile) {
   const lines = input.split('\n').map(line => line.trim());
   const [n, p] = lines[0].split(' ').map(Number);
   const edges = lines.slice(1).map(line => line.split(' ').map(Number));
+  // added by human
   console.log(`n = ${n}, p = ${p}, edges = ${JSON.stringify(edges)}`)
   return [n, p, edges];
 }
@@ -89,6 +90,9 @@ function getMinHospitals(n, edges) {
       numHospitals++; // Añadir un hospital por cada conjunto de islas con el mismo color
     }
   }
+
+  // added by human
+  console.log(`colors=${JSON.stringify(colors)}`);
 
   return numHospitals;
 }
