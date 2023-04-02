@@ -1,5 +1,5 @@
 
-Problem   P39158 from the Spanish Olimpics for Computer Science.
+# Problem   P39158 from the Spanish Olimpics for Computer Science.
 
 An archipelago is made up of N islands,  some of which are connected by P bidirectional bridges.
 
@@ -21,19 +21,19 @@ Assume that the islands are natural numbers numbered from 0, and
 
 Assume that there is no more than one bridge between two islands.
 
-## Formulation in Spanish
+## Formulation in Spanish in the Second attempt
 
 See file [LEEme](LEEme.md)
 
 ## Answer
 
-Here is the answer:
+Here is a capture of Chat GPT-3 answer:
 
 ![](images/segunda-formulacion-1.png)
 
 ![](images/segunda-formulacion-2.png)
 
-See the code in file [chat-gpt3-solution.js](chat-gpt3-solution.js)
+See the code proposed by Chat-GPT in file [chat-gpt3-solution.js](chat-gpt3-solution.js)
 
 When we run it with the input in file [input.txt](input.txt) we get:
 
