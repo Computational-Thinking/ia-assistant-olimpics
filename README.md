@@ -59,4 +59,4 @@ graph LR
 ```
 
 We realize that there is no solution with 4 hospitals and we need 5 to hold the restriction 
-*They want to build hospitals so that no one has to cross more than one bridge to get to a hospital*
+**They want to build hospitals so that no one has to cross more than one bridge to get to a hospital**
