@@ -25,7 +25,7 @@ Assume that there is no more than one bridge between two islands.
 
 See file [LEEme](LEEme.md)
 
-## Answer
+## Chat GPT-3 answer
 
 Here is a capture of Chat GPT-3 answer:
 
@@ -38,14 +38,31 @@ See the code proposed by Chat-GPT in file [chat-gpt3-solution.js](chat-gpt3-solu
 When we run it with the input in file [input.txt](input.txt) we get:
 
 ```
-➜  P31958_es git:(understanding-2nd-attempt) node chat-gpt3-solution.js
+➜  P31958_es git:(understanding-2nd-attempt) ✗ node chat-gpt3-solution.js
 n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]]
+Coloring island 0 with color 0. numHospitals=1
+Coloring island 2 with color 0. numHospitals=2
+Coloring island 3 with color 0. numHospitals=3
+Coloring island 6 with color 0. numHospitals=4
+colors=[0,1,0,0,1,0,0,1,0,1]
 4
 ```
 
-(I have added an additional sneak line to show the data structure used by the solution) 
+I have added an additional sneak line to show the data structure used by the solution and another to show that numHospital is incremented when and only when a new unconnected component/island is found.
 
-But if we see the graph for file [input.txt](input.txt):
+But the first example in file [input.txt](input.txt) is 
+
+```
+10 6
+0 1
+3 4
+4 5
+6 7
+7 8
+8 9
+```
+
+whose graph is:
 
 ```mermaid
 graph LR
@@ -61,7 +78,7 @@ graph LR
 We realize that there is no solution with 4 hospitals and we need 5 to hold the restriction 
 **They want to build hospitals so that no one has to cross more than one bridge to get to a hospital**
 
-Let us see the function `colorIsland(island, color)`:
+Here is the code for the function `colorIsland(island, color)`:
 
 ```js 
 // Función auxiliar para asignar un color a una isla y sus vecinas
@@ -78,3 +95,61 @@ Let us see the function `colorIsland(island, color)`:
 ```
 
 It traverses the `edges` array looking for edges starting or finishing in the `island` and if the island on the other side of the bridge has not been colored it assigns `1 - color` ( a different color) to the neighbor island. 
+
+See how `numHospitals` is increased when a new uncolored island (i.e. a new unconnected component) is found:
+
+```js 
+  // Recorrer todas las islas y asignar colores si aún no se ha hecho
+  for (let i = 0; i < n; i++) {
+    if (colors[i] === -1) {
+      colorIsland(i, 0); // Asignar el color "0" a la isla actual y sus vecinas
+      numHospitals++; // Añadir un hospital por cada conjunto de islas con el mismo color
+      // added by human
+      console.log(`Coloring island ${i} with color 0. numHospitals=${numHospitals}`)
+    }
+  }
+```
+
+Therefore the solution is wrong and what `numHospitals` contains is the number of connected components. 
+
+## Second instance
+
+Here is the second instance:
+
+```
+9 8
+0 4
+7 0
+3 5
+8 6
+1 6
+2 8
+4 1
+5 1
+```
+
+whose graph is:
+
+```mermaid
+graph LR
+    0((0)) <--> 4((4))
+    7((7)) <--> 0((0))
+    3((3)) <--> 5((5))
+    8((8)) <--> 6((6))
+    1 <--> 6((6))
+    2((2)) <--> 8((8))
+    4 <--> 1((1))
+    5 <--> 1
+```
+
+and whose solution is 3.
+
+The execution of the Chat GPT-3 solution gives 1, since all the items are in a connected component:
+
+```
+➜  P31958_es git:(understanding-2nd-attempt) ✗ node chat-gpt3-solution.js input2.txt 
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]
+Coloring island 0 with color 0. numHospitals=1
+colors=[0,0,1,0,1,1,1,1,0]
+1
+```

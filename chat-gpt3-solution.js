@@ -88,6 +88,8 @@ function getMinHospitals(n, edges) {
     if (colors[i] === -1) {
       colorIsland(i, 0); // Asignar el color "0" a la isla actual y sus vecinas
       numHospitals++; // Añadir un hospital por cada conjunto de islas con el mismo color
+      // added by human
+      console.log(`Coloring island ${i} with color 0. numHospitals=${numHospitals}`)
     }
   }
 
@@ -98,7 +100,7 @@ function getMinHospitals(n, edges) {
 }
 
 // Ejemplo de uso
-const inputFile = 'input.txt'; // Nombre del archivo de entrada
+const inputFile = process.argv[2] || 'input.txt'; // Nombre del archivo de entrada
 const [n, p, edges] = readInputFile(inputFile);
 const minHospitals = getMinHospitals(n, edges);
 console.log(minHospitals);
