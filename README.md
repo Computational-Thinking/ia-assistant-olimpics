@@ -21,4 +21,13 @@ Assume that the islands are natural numbers numbered from 0, and
 
 Assume that there is no more than one bridge between two islands.
 
-Formulation in Spanish. See file [LEEme](LEEme.md)
+## Formulation in Spanish
+
+See file [LEEme](LEEme.md)
+
+## Answer
+
+![](images/segunda-formulacion-1.png)
+
+![](images/segunda-formulacion-2.png)
+
