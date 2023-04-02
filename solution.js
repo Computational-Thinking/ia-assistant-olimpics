@@ -48,7 +48,25 @@ connections3 = [
 ]
 // solution is 2
 
+function isInBridge(island, bridge) {
+  return bridge[0] === island ? bridge[1] : bridge[0]
+
+function getBridgesFor(island, connections) {
+  return connections.filter(connection => connection.includes(island))
+}
+
+function getIslandsInBridges(bridges) {
+ 
+}
+// The distance between two islands is the minimum number of bridges that must be crossed to get from one island to the other.
+function computeMinimumDistance(island1, island2, connections) {
+  const bridges1 = isInBridge(island1, connections)
+  if (bridges1.filter(bridge => getOtherSide(island2, bridge))) {
+    return 1
+  }
+}
+
 function minimumHospitals(N, P, connections) {
-  // find the diameter of the connections graph
-  // the diameter is the longest path between two nodes
+
+
 }
