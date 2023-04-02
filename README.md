@@ -29,9 +29,9 @@ See file [LEEme](LEEme.md)
 
 Here is a capture of Chat GPT-3 answer:
 
-![](images/segunda-formulacion-1.png)
+[![](images/segunda-formulacion-1.png)](chat-gpt3-solution.js)
 
-![](images/segunda-formulacion-2.png)
+[![](images/segunda-formulacion-2.png)](chat-gpt3-solution.js)
 
 See the code proposed by Chat-GPT in file [chat-gpt3-solution.js](chat-gpt3-solution.js)
 
