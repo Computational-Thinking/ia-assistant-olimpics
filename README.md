@@ -45,7 +45,7 @@ n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]]
 
 (I have added an additional sneak line to show the data structure used by the solution) 
 
-But if we see the graph:
+But if we see the graph for file [input.txt](input.txt):
 
 ```mermaid
 graph LR
