@@ -22,7 +22,9 @@ Sigue un ejemplo completo de entrada con 10 islas y 6 puentes:
 7 8
 8 9
 
-Otro ejemplo de entrada con 9 islas y 8 puentes:
+Para este ejemplo la solución es "5"
+
+Pongo otro ejemplo de entrada con 9 islas y 8 puentes:
 
 9 8
 0 4
@@ -34,6 +36,8 @@ Otro ejemplo de entrada con 9 islas y 8 puentes:
 4 1
 5 1
 
+Para este segundo ejemplo la solución es "3"
+
 Un tercer ejemplo de entrada con 5 islas y 4 puentes:
 
 5 4
@@ -42,12 +46,4 @@ Un tercer ejemplo de entrada con 5 islas y 4 puentes:
 1 3
 1 4
 
-paso a describir como debe ser la salida.
-
-Hay que simplemente escribir número mínimo de hospitales.
-
-Ejemplo de salida para las entrada anteriores:
-
-1. Para el primer ejemplo escribir "5"
-2. Para el segundo ejemplo escribir "3"
-3. Para el tercer ejemplo escribir "2"
+el número mínimo de hospitales es "2"
