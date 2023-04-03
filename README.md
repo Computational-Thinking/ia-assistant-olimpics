@@ -1,3 +1,44 @@
+## Modifications in branch greedy-algorithm
+
+This branch is a human fix of some errors.
+numHospitals is renamed to numComponents.
+The number of hospitals and the proposed placement is shown.
+
+For the first problem finds a solution with 6 hospitals:
+
+```
+➜  P31958_es git:(greedy-algorithm) node chat-gpt3-solution.js           
+n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]]
+Coloring island 0 with color 0. numComponents=1
+Coloring island 2 with color 0. numComponents=2
+Coloring island 3 with color 0. numComponents=3
+Coloring island 6 with color 0. numComponents=4
+colors=[0,1,0,0,1,0,0,1,0,1]
+Hospitals: [0,2,3,5,6,8], numHospitals: 6
+```
+
+For the second gives a solution with 4 hospitals:
+
+```
+➜  P31958_es git:(greedy-algorithm) ✗ node chat-gpt3-solution.js input2.txt
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]
+Coloring island 0 with color 0. numComponents=1
+colors=[0,0,1,0,1,1,1,1,0]
+Hospitals: [0,1,3,8], numHospitals: 4
+```
+
+and for the third gives a solution with 2 hospitals:
+
+```
+➜  P31958_es git:(greedy-algorithm) ✗ node chat-gpt3-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]
+Coloring island 0 with color 0. numComponents=1
+colors=[0,0,1,1,1]
+Hospitals: [0,1], numHospitals: 2
+```
+
+
+
 
 # Problem   P39158 from the Spanish Olimpics for Computer Science.
 
