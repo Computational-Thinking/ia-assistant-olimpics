@@ -1,7 +1,8 @@
 
-# Problem   P39158 from the Spanish Olimpics for Computer Science.
+# Problem   P31958 from the Spanish Olimpics for Computer Science.
 
 See [problem.pdf](problem.pdf) for the full text.
+See [https://jutge.org/problems/P31958_es](https://jutge.org/problems/P31958_es) for the original description.
 
 An archipelago is made up of N islands,  some of which are connected by P bidirectional bridges.
 
