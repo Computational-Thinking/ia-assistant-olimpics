@@ -10,3 +10,4 @@
  Assume that the islands are natural numbers numbered from 0, and 
  Assume that there is no more than one bridge between two islands.
 
+For the full text see the pdf file [problem.pdf](problem.pdf)
