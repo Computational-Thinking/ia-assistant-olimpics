@@ -1,6 +1,8 @@
 
 # Problem   P39158 from the Spanish Olimpics for Computer Science.
 
+See [problem.pdf](problem.pdf) for the full text.
+
 An archipelago is made up of N islands,  some of which are connected by P bidirectional bridges.
 
 It is known that there is at most one bridge between each pair of islands.
