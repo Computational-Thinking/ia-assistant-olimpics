@@ -79,14 +79,25 @@ function readInputFile(inputFile) {
   const [n, p] = lines[0].split(' ').map(Number);
   const edges = lines.slice(1).map(line => line.split(' ').map(Number));
   // added by human
-  console.log(`n = ${n}, p = ${p}, edges = ${JSON.stringify(edges)}`)
-  return [n, p, edges];
+  const numNeighbors = computeNumNeighbors(n, edges);
+
+  console.log(`n = ${n}, p = ${p}, edges = ${JSON.stringify(edges)} numNeighbors = ${JSON.stringify(numNeighbors)}`)
+  return [n, p, edges, numNeighbors];
+}
+
+function computeNumNeighbors(n, edges) {
+  const numNeighbors = new Array(n).fill(0);
+  for (const [i, j] of edges) {
+    numNeighbors[i]++;
+    numNeighbors[j]++;
+  }
+  return numNeighbors;
 }
 
 // Función para obtener el número mínimo de hospitales
-function getHospitals(n, edges) {
+function getHospitals(n, edges, numNeighbors) {
   const colors = new Array(n).fill(-1); // Array para almacenar los colores asignados a cada isla
-  let numComponents = 0; // Contador de hospitales
+  let numComponents = 0; // Contador de componentes
 
   // Función auxiliar para asignar un color a una isla y sus vecinas
   function colorIsland(island, color) {
@@ -101,14 +112,16 @@ function getHospitals(n, edges) {
   }
 
   // Recorrer todas las islas y asignar colores si aún no se ha hecho
-  for (let i = 0; i < n; i++) {
+  // sort the indices by the number of neighbors in descending order
+  let nodes = [...Array(n).keys()].sort((a, b) => numNeighbors[b] - numNeighbors[a])
+  nodes.forEach(i => {
     if (colors[i] === -1) {
       colorIsland(i, 0); // Asignar el color "0" a la isla actual y sus vecinas
-      numComponents++; // Añadir un hospital por cada conjunto de islas con el mismo color
+      numComponents++; // Añadir una componente
       // added by human
       console.log(`Coloring island ${i} with color 0. numComponents=${numComponents}`)
-    }
-  }
+    }  
+  })
 
   // added by human
   console.log(`colors=${JSON.stringify(colors)}`);
@@ -119,6 +132,6 @@ function getHospitals(n, edges) {
 
 // Ejemplo de uso
 const inputFile = process.argv[2] || 'input.txt'; // Nombre del archivo de entrada
-const [n, p, edges] = readInputFile(inputFile);
-const hospitals = getHospitals(n, edges);
+const [n, p, edges, numNeighbors] = readInputFile(inputFile);
+const hospitals = getHospitals(n, edges, numNeighbors);
 console.log(`Hospitals: ${JSON.stringify(hospitals)}, numHospitals: ${hospitals.length}`);
