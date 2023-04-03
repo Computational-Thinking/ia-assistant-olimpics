@@ -145,7 +145,7 @@ graph LR
     5 <--> 1
 ```
 
-and whose solution is 3.
+and whose solution is 3 with hospitals at `[0, 5, 8]`.
 
 The execution of the Chat GPT-3 solution gives 1, since all the items are in a connected component:
 
