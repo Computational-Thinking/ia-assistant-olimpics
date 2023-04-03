@@ -113,7 +113,7 @@ See how `numHospitals` is increased when a new uncolored island (i.e. a new unco
   }
 ```
 
-Therefore the solution is wrong and what `numHospitals` contains is the number of connected components but the algorithm is still correct: The **solution is the number of zeroes in the `colors` array**. 
+Therefore the **printed solution is wrong** and what `numHospitals` contains is the number of connected components but the algorithm is still correct: The **solution is the number of zeroes in the `colors` array**. 
 
 ## Second instance
 
