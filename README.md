@@ -1,3 +1,8 @@
+## Modifications in this branch `human`
+
+This branch modifies the solution to sort the islands by number of neighbors in descending order.
+Most of the program is like the one in branch `greedy-algorithm`
+
 
 # Problem   P39158 from the Spanish Olimpics for Computer Science.
 
