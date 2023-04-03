@@ -3,6 +3,38 @@
 This branch modifies the solution to sort the islands by number of neighbors in descending order.
 Most of the program is like the one in branch `greedy-algorithm`
 
+It improves in the first instance from 6 to 5:
+
+```
+➜  P31958_es git:(human) node chat-gpt3-solution.js           
+n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]] numNeighbors = [1,1,0,1,2,1,1,2,2,1]
+Coloring island 4 with color 0. numComponents=1
+Coloring island 7 with color 0. numComponents=2
+Coloring island 0 with color 0. numComponents=3
+Coloring island 2 with color 0. numComponents=4
+colors=[0,1,0,1,0,1,1,0,1,0]
+Hospitals: [0,2,4,7,9], numHospitals: 5
+```
+
+Ties to 4 with the second (but there is a solution with 3 hospitals):
+
+```
+➜  P31958_es git:(human) node chat-gpt3-solution.js input2.txt
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]] numNeighbors = [2,3,1,1,2,2,2,1,2]
+Coloring island 1 with color 0. numComponents=1
+colors=[0,0,1,0,1,1,1,1,0]
+Hospitals: [0,1,3,8], numHospitals: 4
+```
+
+and ties to 2 also with the third:
+
+```
+➜  P31958_es git:(human) ✗ node chat-gpt3-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]] numNeighbors = [1,3,2,1,1]
+Coloring island 1 with color 0. numComponents=1
+colors=[0,0,1,1,1]
+Hospitals: [0,1], numHospitals: 2
+```
 
 # Problem   P39158 from the Spanish Olimpics for Computer Science.
 
