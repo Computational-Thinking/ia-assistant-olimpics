@@ -54,6 +54,23 @@ Claro que sí! Una posible solución al problema es utilizar el algoritmo de col
 
 Aquí te dejo el código en JavaScript para resolver el problema utilizando este enfoque:
 */
+
+/*
+* **Q:** How can I solve the resource allocation problem in a graph?
+
+Assume I have a graph of nodes  and edges and I have to allocate resources (say hospitals for instance) in a subset of the nodes in order guarantee that any node is served from a resource not far than 1 edge.
+
+* **A:** The resource allocation problem in a graph with the requirement that any node should be served by a resource not far than 1 edge can be solved using graph coloring algorithms.
+
+The first step is to identify the subset of nodes where resources (hospitals) need to be allocated. Once the subset of nodes is identified, a graph coloring algorithm can be used to allocate resources in such a way that no two adjacent nodes have the same color (i.e., no two nodes that share an edge have the same resource). This ensures that each node is served by a resource not far than 1 edge.
+
+One such algorithm is the greedy graph coloring algorithm. The algorithm assigns the first color to the first node and then iterates through the remaining nodes, assigning the lowest possible color that has not been assigned to any of its neighbors. The algorithm continues until all nodes are assigned a color.
+
+Another algorithm that can be used is the backtracking algorithm. This algorithm recursively assigns colors to nodes and backtracks if a node cannot be assigned a color without violating the 1-edge constraint.
+
+Both algorithms have their pros and cons, and the choice of algorithm will depend on the size and complexity of the graph. However, both algorithms are effective for solving the resource allocation problem in a graph with the 1-edge constraint.
+*/
+
 // Función para leer la entrada desde un archivo
 function readInputFile(inputFile) {
   const fs = require('fs');
@@ -67,9 +84,9 @@ function readInputFile(inputFile) {
 }
 
 // Función para obtener el número mínimo de hospitales
-function getMinHospitals(n, edges) {
+function getHospitals(n, edges) {
   const colors = new Array(n).fill(-1); // Array para almacenar los colores asignados a cada isla
-  let numHospitals = 0; // Contador de hospitales
+  let numComponents = 0; // Contador de hospitales
 
   // Función auxiliar para asignar un color a una isla y sus vecinas
   function colorIsland(island, color) {
@@ -87,20 +104,21 @@ function getMinHospitals(n, edges) {
   for (let i = 0; i < n; i++) {
     if (colors[i] === -1) {
       colorIsland(i, 0); // Asignar el color "0" a la isla actual y sus vecinas
-      numHospitals++; // Añadir un hospital por cada conjunto de islas con el mismo color
+      numComponents++; // Añadir un hospital por cada conjunto de islas con el mismo color
       // added by human
-      console.log(`Coloring island ${i} with color 0. numHospitals=${numHospitals}`)
+      console.log(`Coloring island ${i} with color 0. numComponents=${numComponents}`)
     }
   }
 
   // added by human
   console.log(`colors=${JSON.stringify(colors)}`);
 
-  return numHospitals;
+  // Modified by human
+  return [...colors.keys()].filter(i => colors[i] == 0);
 }
 
 // Ejemplo de uso
 const inputFile = process.argv[2] || 'input.txt'; // Nombre del archivo de entrada
 const [n, p, edges] = readInputFile(inputFile);
-const minHospitals = getMinHospitals(n, edges);
-console.log(minHospitals);
+const hospitals = getHospitals(n, edges);
+console.log(`Hospitals: ${JSON.stringify(hospitals)}, numHospitals: ${hospitals.length}`);
