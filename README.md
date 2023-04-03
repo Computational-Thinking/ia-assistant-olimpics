@@ -186,3 +186,21 @@ Coloring island 0 with color 0. numHospitals=1
 colors=[0,0,1,1,1]
 1
 ```
+
+## Reformulating the question as a location-allocation problem
+
+![](images/reformulate-the-question.png)
+
+* **Q:** How can I solve the resource allocation problem in a graph?
+
+Assume I have a graph of nodes  and edges and I have to allocate resources (say hospitals for instance) in a subset of the nodes in order guarantee that any node is served from a resource not far than 1 edge.
+
+* **A:** The resource allocation problem in a graph with the requirement that any node should be served by a resource not far than 1 edge can be solved using graph coloring algorithms.
+
+The first step is to identify the subset of nodes where resources (hospitals) need to be allocated. Once the subset of nodes is identified, a graph coloring algorithm can be used to allocate resources in such a way that no two adjacent nodes have the same color (i.e., no two nodes that share an edge have the same resource). This ensures that each node is served by a resource not far than 1 edge.
+
+One such algorithm is the greedy graph coloring algorithm. The algorithm assigns the first color to the first node and then iterates through the remaining nodes, assigning the lowest possible color that has not been assigned to any of its neighbors. The algorithm continues until all nodes are assigned a color.
+
+Another algorithm that can be used is the backtracking algorithm. This algorithm recursively assigns colors to nodes and backtracks if a node cannot be assigned a color without violating the 1-edge constraint.
+
+Both algorithms have their pros and cons, and the choice of algorithm will depend on the size and complexity of the graph. However, both algorithms are effective for solving the resource allocation problem in a graph with the 1-edge constraint.
