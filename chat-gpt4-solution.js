@@ -1,92 +1,52 @@
 /*
-Puedes ayudarme a escribir un programa JavaScript que resuelva el siguiente problema: 
-Se tiene un archipiélago que está constituido por "n" islas, 
-algunas de las cuales están conectadas por puentes bi-direccionales. 
-Se sabe que hay como mucho un camino entre cada par de islas. 
-Se quieren construir hospitales de manera que nadie tenga que 
-cruzar más de un puente para llegar a un hospital. 
-El programa debe computar el mínimo número de hospitales necesarios. 
-Paso a describir como es la entrada. 
-La entrada consiste en un fichero con 
-1. En la primera línea, el número de islas "n" y el número de puentes "p" separados por un blanco. 
-  Por ejemplo: "10 6" indica que hay n=10 islas y p=6 puentes.
-2. En las siguientes "p" líneas del fichero de entrada aparecen pares de números "x y", con "x" distinto de "y" indicando el par de islas conectadas por cada puente. 
-  Una línea como "0 1" indica que la isla "0" está conectada mediante 
-  un puente con la isla "1". 
-3. Se supone que n es menor o igual
-
-Truncada entrada por Bing
+Same question as in branch "chatgpt-2nd-attempt" but to chat-gpt-4 (Bing).
 */
 
-/* RESPUESTA:
-
-¡Hola! Claro que puedo ayudarte a escribir un programa JavaScript 
-que resuelva el problema que mencionas.
-
-Para resolver este problema, se puede utilizar el algoritmo 
-de coloración de grafos, que consiste en asignar un color a 
-cada vértice de tal forma que dos vértices adyacentes 
-no tengan el mismo color. En este caso, los vértices representan 
-las islas y las aristas representan los puentes.
-
-El número mínimo de hospitales necesarios es igual al 
-número cromático del grafo, es decir, 
-el número mínimo de colores necesarios para colorear el 
-grafo de tal forma que dos vértices adyacentes no tengan el mismo color.
-
-Aquí te muestro un ejemplo de cómo 
-podrías implementar este algoritmo en JavaScript:
-*/
+function DFS(v, visited, adj) {
+    visited[v] = true;
+    for (let i = 0; i < adj[v].length; i++) {
+        if (!visited[adj[v][i]]) {
+            DFS(adj[v][i], visited, adj);
+        }
+    }
+}
 
 function minHospitals(n, edges) {
-  const graph = new Map();
-  for (let i = 0; i < n; i++) {
-    graph.set(i, []);
-  }
-  for (const [u, v] of edges) {
-    graph.get(u).push(v);
-    graph.get(v).push(u);
-  }
-  const colors = new Map();
-  let hospitalCount = 0;
-  for (const [node, neighbors] of graph) {
-    if (!colors.has(node)) {
-      const queue = [node];
-      colors.set(node, hospitalCount++);
-      while (queue.length > 0) {
-        const currNode = queue.shift();
-        for (const neighbor of graph.get(currNode)) {
-          if (!colors.has(neighbor)) {
-            colors.set(neighbor, hospitalCount++);
-            queue.push(neighbor);
-          }
-        }
-      }
+    let adj = new Array(n);
+    let visited = new Array(n);
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        adj[i] = [];
+        visited[i] = false;
     }
-  }
-  return hospitalCount;
+    for (let i = 0; i < edges.length; i++) {
+        let u = edges[i][0];
+        let v = edges[i][1];
+        adj[u].push(v);
+        adj[v].push(u);
+    }
+    for (let i = 0; i < n; i++) {
+        if (!visited[i]) {
+            DFS(i, visited, adj);
+            count++;
+        }
+    }
+    return count;
 }
 
 // Ejemplo de uso
-const n = 10;
-const edges = [
-  [0, 1],
-  [1, 2],
-  [2, 3],
-  [3, 4],
-  [4, 5],
-  [5, 6],
-];
-console.log(minHospitals(n, edges)); // Output: 4
+let n = 10;
+let edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]];
+console.log(minHospitals(n, edges)); // Output: 5
 
-/* RESPUESTA (continuación):
-En este ejemplo se asume que la entrada es un número `n` 
-y una lista de aristas `edges`, donde cada arista es una 
-lista de dos números que representan los vértices conectados por la arista.
+/*
+Espero que esto te ayude a resolver tu problema. ¡Buena suerte! 😊
 
-Espero que esto te ayude. ¿Tienes alguna otra pregunta?
-
-Origen: Conversación con Bing, 4/4/2023(1) Fundamentos de JavaScript - Aprende sobre desarrollo web | MDN - Mozilla. https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics Con acceso 4/4/2023.
-(2) Ejemplos prácticos de Javascript (I) | Observatorio Tecnológico. http://recursostic.educacion.es/observatorio/web/gl/software/programacion/490-lorena-arranz Con acceso 4/4/2023.
-(3) JavaScript - Technical University of Valencia. https://lemus.webs.upv.es/wordpress/wp-content/uploads/2018/07/javascript-es6-ejercicios-resueltos-parte-1.pdf Con acceso 4/4/2023.
+Origen: Conversación con Bing, 4/4/2023(1) Leer archivos en JavaScript. https://web.dev/i18n/es/read-files/ Con acceso 4/4/2023.
+(2) Leer archivo de texto en JavaScript | Delft Stack. https://www.delftstack.com/es/howto/javascript/read-text-file-in-javascript/ Con acceso 4/4/2023.
+(3) Leer archivo línea por línea en JavaScript | Delft Stack. https://www.delftstack.com/es/howto/javascript/javascript-read-file-line-by-line/ Con acceso 4/4/2023.
+(4) Cómo leer un archivo de texto con código de Javascript en HTML (En 6 .... https://techlandia.com/leer-archivo-texto-codigo-javascript-html-como_43910/ Con acceso 4/4/2023.
+(5) html - ¿Cómo leer un archivo .txt desde JavaScript? - Stack Overflow en .... https://es.stackoverflow.com/questions/54734/c%C3%B3mo-leer-un-archivo-txt-desde-javascript Con acceso 4/4/2023.
+(6) Lectura de archivos con JavaScript - Stack Overflow en español. https://es.stackoverflow.com/questions/193178/lectura-de-archivos-con-javascript Con acceso 4/4/2023.
+(7) Cómo leer un archivo de texto con código de Javascript en HTML (En 6 .... https://techlandia.com/leer-archivo-texto-codigo-javascript-html-como_43910/ Con acceso 4/4/2023.
 */
