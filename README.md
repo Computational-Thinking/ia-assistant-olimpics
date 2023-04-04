@@ -1,3 +1,16 @@
+## Branch chat-gpt-4
+
+Contains a solution using chat-gpt-4 (chat in Bing search, April 3d 2023).
+
+Here is an execution with the program as described by chat-gp-4:
+
+```
+P31958_es git:(chat-gpt-4) node chat-gpt4-solution.js 
+10
+```
+
+## Initial Description
+
  An archipelago is made up of N islands,  some of which are connected by P bidirectional bridges.
  It is known that there is at most one bridge between each pair of islands.
  They want to build hospitals so that no one has to cross more than one bridge to get to a hospital.
