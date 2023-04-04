@@ -30,7 +30,7 @@ function minHospitals(n, edges) {
     let visited = new Array(n).fill(false);
     let colors = new Array(n).fill(null);
 
-    let count = 0;
+    let numComponents = 0;
     for (let i = 0; i < edges.length; i++) {
         let u = edges[i][0];
         let v = edges[i][1];
@@ -40,10 +40,10 @@ function minHospitals(n, edges) {
     for (let i = 0; i < n; i++) {
         if (!visited[i]) {
             DFS(null, i, visited, adj, colors);
-            count++;
+            numComponents++;
         }
     }
-    return { count, colors };
+    return { numComponents, colors, numHospitals: colors.filter(c => c == 0).length };
 }
 
 // Modified by human to get the input from file
