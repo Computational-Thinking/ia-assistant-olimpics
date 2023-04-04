@@ -14,23 +14,23 @@ function readInputFile(inputFile) {
   return [n, edges];
 }
 
-function DFS(v, visited, adj) {
+function DFS(p, v, visited, adj, colors) {
     visited[v] = true;
+    colors[v] = (p !== null)? 1 - colors[p] : 0;
+    console.error(`coloring ${v} of color ${colors[v]} with parent ${p}`)
     for (let i = 0; i < adj[v].length; i++) {
         if (!visited[adj[v][i]]) {
-            DFS(adj[v][i], visited, adj);
+            DFS(v, adj[v][i], visited, adj, colors);
         }
     }
 }
 
 function minHospitals(n, edges) {
-    let adj = new Array(n);
-    let visited = new Array(n);
+    let adj = new Array(n).fill(null).map(() => []);
+    let visited = new Array(n).fill(false);
+    let colors = new Array(n).fill(null);
+
     let count = 0;
-    for (let i = 0; i < n; i++) {
-        adj[i] = [];
-        visited[i] = false;
-    }
     for (let i = 0; i < edges.length; i++) {
         let u = edges[i][0];
         let v = edges[i][1];
@@ -39,11 +39,11 @@ function minHospitals(n, edges) {
     }
     for (let i = 0; i < n; i++) {
         if (!visited[i]) {
-            DFS(i, visited, adj);
+            DFS(null, i, visited, adj, colors);
             count++;
         }
     }
-    return count;
+    return { count, colors };
 }
 
 // Modified by human to get the input from file
