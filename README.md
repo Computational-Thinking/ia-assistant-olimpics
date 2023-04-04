@@ -6,8 +6,9 @@ Contains a solution using chat-gpt-4 (chat in Bing search, April 3d 2023).
 
 I copy pasted the question as in file [LEEme.md](LEEme.md)
 
-As you can see the text was truncated by the app. In spite of that the answer seems to be quite adapted to what we were looking for. See file [chat-gpt-4-solution.js](chat-gpt4-solution.js)
+For the initial formulation see the pdf file [problem.pdf](problem.pdf)
 
+See file [chat-gpt-4-solution.js](chat-gpt4-solution.js) in branch `chat-gpt-4`
 
 Here is an execution with the program as described by chat-gpt-4:
 
@@ -16,20 +17,121 @@ Here is an execution with the program as described by chat-gpt-4:
 4 
 ```
 
+And once modified to read from file in this branch we get for the other two instances:
+
+```
+➜  P31958_es git:(chat-gpt-4-human) ✗ node chat-gpt4-solution.js input2.txt
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]}
+1
+➜  P31958_es git:(chat-gpt-4-human) ✗ node chat-gpt4-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]}
+1 
+```
+
+Which seems to give as answer the number of connected components.
+
+
 That seems correct.
 
-## Initial Description
 
- An archipelago is made up of N islands,  some of which are connected by P bidirectional bridges.
- It is known that there is at most one bridge between each pair of islands.
- They want to build hospitals so that no one has to cross more than one bridge to get to a hospital.
- The problem is: What is the minimum number of hospitals needed?
- Write a function that, given the number of islands N, the number of bridges P, and the connections array between the islands,
- returns the minimum number of hospitals needed.
- The connections array  consist of an array of P  pairs [x, y], with x not equal to y, containing the islands connected by each bridge. 
- Assume N is greater than 1 and less or equal to 105, 
- Assumen P is between 0 and N, 
- Assume that the islands are natural numbers numbered from 0, and 
- Assume that there is no more than one bridge between two islands.
 
-For the full text see the pdf file [problem.pdf](problem.pdf)
+## First instance
+
+But the first example in file [input.txt](input.txt) is 
+
+```
+10 6
+0 1
+3 4
+4 5
+6 7
+7 8
+8 9
+```
+
+whose graph is:
+
+```mermaid
+graph LR
+    6((6)) <--> 7((7))
+    7 <--> 8((8))
+    8 <--> 9((9))
+    3((3)) <--> 4((4))
+    4 <--> 5((5))
+    0((0)) <--> 1((1))
+    2((2))
+```
+## Second instance
+
+Here is the second instance:
+
+```
+9 8
+0 4
+7 0
+3 5
+8 6
+1 6
+2 8
+4 1
+5 1
+```
+
+whose graph is:
+
+```mermaid
+graph LR
+    0((0)) <--> 4((4))
+    7((7)) <--> 0((0))
+    3((3)) <--> 5((5))
+    8((8)) <--> 6((6))
+    1 <--> 6((6))
+    2((2)) <--> 8((8))
+    4 <--> 1((1))
+    5 <--> 1
+```
+
+and whose solution is 3.
+
+The execution of the Chat GPT-3 solution gives 1, since all the items are in a connected component:
+
+```
+➜  P31958_es git:(understanding-2nd-attempt) ✗ node chat-gpt3-solution.js input2.txt 
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]
+Coloring island 0 with color 0. numHospitals=1
+colors=[0,0,1,0,1,1,1,1,0]
+1
+```
+
+## Third instance
+
+The third given instance is:
+
+```
+5 4
+0 2
+2 1
+1 3
+1 4
+```
+whose graph is:
+
+```mermaid
+graph LR
+    0((0)) <--> 2((2))
+    2((2)) <--> 1((1))
+    1((1)) <--> 3((3))
+    1((1)) <--> 4((4))
+```
+
+and whose solution is 2.
+
+The execution gives:
+
+```
+➜  P31958_es git:(understanding-2nd-attempt) ✗ node chat-gpt3-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]
+Coloring island 0 with color 0. numHospitals=1
+colors=[0,0,1,1,1]
+1
+```

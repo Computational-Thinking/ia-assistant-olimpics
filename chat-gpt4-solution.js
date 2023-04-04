@@ -2,6 +2,18 @@
 Same question as in branch "chatgpt-2nd-attempt" but to chat-gpt-4 (Bing).
 */
 
+// Función para leer la entrada desde un archivo
+function readInputFile(inputFile) {
+  const fs = require('fs');
+  const input = fs.readFileSync(inputFile, 'utf8');
+  const lines = input.split('\n').map(line => line.trim());
+  const [n, p] = lines[0].split(' ').map(Number);
+  const edges = lines.slice(1).map(line => line.split(' ').map(Number));
+
+  console.log(`n = ${n}, p = ${p}, edges = ${JSON.stringify(edges)}}`)
+  return [n, edges];
+}
+
 function DFS(v, visited, adj) {
     visited[v] = true;
     for (let i = 0; i < adj[v].length; i++) {
@@ -34,9 +46,10 @@ function minHospitals(n, edges) {
     return count;
 }
 
-// Ejemplo de uso
-let n = 10;
-let edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]];
+// Modified by human to get the input from file
+const inputFile = process.argv[2] || 'input.txt'; // Nombre del archivo de entrada
+const [n, edges] = readInputFile(inputFile);
+
 console.log(minHospitals(n, edges)); // Output: 5
 
 /*
