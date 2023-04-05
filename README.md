@@ -1,38 +1,80 @@
-# Branch chat-gpt-4
+# Branch chat-gpt-4-allocation-problem
 
-Contains a solution using chat-gpt-4 (chat in Bing search, April 3d 2023).
 
 ## Formulating the question
 
-I copy pasted the question as in file [LEEme.md](LEEme.md)
+### Q 
 
-For the initial formulation see the pdf file [problem.pdf](problem.pdf)
+How can I solve the resource allocation problem in a graph? Assume I have a graph of nodes and edges and I have to allocate resources (say hospitals for instance) in a subset of the nodes in order guarantee that any node is served from a resource not far than 1 edge.
 
-See file [chat-gpt-4-solution.js](chat-gpt4-solution.js) in branch `chat-gpt-4`
+### A
 
-Here is an execution with the program as described by chat-gpt-4:
+The problem you are describing is called the **minimum dominating set problem**¹. It is a well-known problem in graph theory that has many applications in computer science, operations research, and other fields.
 
+The minimum dominating set problem is defined as follows: given an undirected graph G = (V, E), find a minimum subset D of V such that every vertex not in D is adjacent to at least one vertex in D ¹. In your case, you want to find a minimum subset of nodes such that every node in the graph is within one edge of a node in the subset.
+
+This problem is NP-hard ¹, which means that there is no known algorithm that can solve it efficiently for all instances of the problem. However, there are many approximation algorithms that can provide good solutions in practice ².
+
+One such algorithm is called the **greedy algorithm** ². The greedy algorithm starts with an empty set and iteratively adds nodes to the set until every node in the graph is within one edge of a node in the set. At each iteration, it adds the node that covers the most uncovered nodes.
+
+I hope this helps! Let me know if you have any other questions.
+
+1. Origen: Conversación con Bing, 5/4/2023(1) Resource Allocation Problem - an overview | ScienceDirect Topics. https://www.sciencedirect.com/topics/engineering/resource-allocation-problem Con acceso 5/4/2023.
+2. (2) Resource Allocation Graph (RAG) in Operating System. https://www.geeksforgeeks.org/resource-allocation-graph-rag-in-operating-system/ Con acceso 5/4/2023.
+3. (3) Resource Allocation Problems | SpringerLink. https://link.springer.com/chapter/10.1007/978-1-4613-0303-9_14 Con acceso 5/4/2023.
+
+### Q
+
+Can you write a JavaScript solution?
+
+### A 
+
+Sure! Here's a JavaScript solution that uses the greedy algorithm I mentioned earlier:
+
+```javascript
+function minimumDominatingSet(graph) {
+  const nodes = Object.keys(graph);
+  const dominatingSet = new Set();
+
+  while (nodes.length > 0) {
+    let bestNode = null;
+    let bestCount = -1;
+
+    for (const node of nodes) {
+      const neighbors = graph[node];
+      const uncoveredNeighbors = neighbors.filter(n => !dominatingSet.has(n));
+
+      if (uncoveredNeighbors.length > bestCount) {
+        bestNode = node;
+        bestCount = uncoveredNeighbors.length;
+      }
+    }
+
+    dominatingSet.add(bestNode);
+    nodes.splice(nodes.indexOf(bestNode), 1);
+  }
+
+  return dominatingSet;
+}
 ```
-➜  P31958_es git:(chat-gpt-4) ✗ node chat-gpt4-solution.js 
-4 
+
+The `graph` parameter is an object that maps each node to an array of its neighbors. For example, if you have a graph with nodes `A`, `B`, and `C`, where `A` is connected to `B` and `C`, you would represent it like this:
+
+```javascript
+{
+  A: ['B', 'C'],
+  B: ['A'],
+  C: ['A']
+}
 ```
 
-And once modified to read from file in this branch we get for the other two instances:
+The function returns a set of nodes that form a minimum dominating set.
 
-```
-➜  P31958_es git:(chat-gpt-4-human) ✗ node chat-gpt4-solution.js input2.txt
-n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]}
-1
-➜  P31958_es git:(chat-gpt-4-human) ✗ node chat-gpt4-solution.js input3.txt
-n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]}
-1 
-```
+I hope this helps! Let me know if you have any other questions.
 
-Which seems to give as answer the number of connected components.
-
-
-That seems correct.
-
+Origen: Conversación con Bing, 5/4/2023(1) Minimum number of cameras required to cover all nodes in graph. https://stackoverflow.com/questions/58793494/minimum-number-of-cameras-required-to-cover-all-nodes-in-graph Con acceso 5/4/2023.
+(2) Solving the k-dominating set problem on very large-scale networks .... https://computationalsocialnetworks.springeropen.com/articles/10.1186/s40649-020-00078-5 Con acceso 5/4/2023.
+(3) Minimum-dominating set problem, Competitive programming. https://stackoverflow.com/questions/75804494/minimum-dominating-set-problem-competitive-programming Con acceso 5/4/2023.
 
 
 ## First instance
