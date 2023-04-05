@@ -211,3 +211,9 @@ Coloring island 0 with color 0. numHospitals=1
 colors=[0,0,1,1,1]
 1
 ```
+
+## Conversation 
+
+![](images/chat-gpt-4-dialog-1.png)
+
+![](images/chat-gpt-4-dialog-2.png)
