@@ -1,6 +1,6 @@
 # Branch chat-gpt-4-allocation-problem
 
-Here is anew formulation to chat-gpt-4 as a resource allocation problem.
+Here is a new formulation to chat-gpt-4 as a resource allocation problem.
 
 
 ## Formulating the question
@@ -80,7 +80,7 @@ Origen: Conversación con Bing, 5/4/2023(1) Minimum number of cameras required t
 
 ## Conclusion
 
-There were several errors in the proposed solution.
+There were several errors in the  solution proposed by Chat-gpt-4.
 
 I had to change `nodes` from an array to a Set for convenience.
 
@@ -92,6 +92,23 @@ The main error is that covered/dominated elements weren't supressed.
       //console.log(`Removing node ${neighbor} from the graph`);
       nodes.delete(String(neighbor));
     }
+```
+
+Here are some executions:
+
+```
+➜  P31958_es git:(chat-gpt-4-allocation-problem) node chat-gpt4-solution.js           
+n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]]}
+graph = {"0":[1],"1":[0],"2":[],"3":[4],"4":[3,5],"5":[4],"6":[7],"7":[6,8],"8":[7,9],"9":[8]}
+Set(5) { '4', '7', '0', '9', '2' }
+➜  P31958_es git:(chat-gpt-4-allocation-problem) ✗ node chat-gpt4-solution.js input2.txt
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]}
+graph = {"0":[4,7],"1":[6,4,5],"2":[8],"3":[5],"4":[0,1],"5":[3,1],"6":[8,1],"7":[0],"8":[6,2]}
+Set(4) { '1', '0', '8', '3' }
+➜  P31958_es git:(chat-gpt-4-allocation-problem) ✗ node chat-gpt4-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]}
+graph = {"0":[2],"1":[2,3,4],"2":[0,1],"3":[1],"4":[1]}
+Set(2) { '1', '0' }
 ```
 
 ## First instance
