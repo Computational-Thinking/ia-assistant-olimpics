@@ -1,5 +1,7 @@
 # Branch chat-gpt-4-allocation-problem
 
+Here is anew formulation to chat-gpt-4 as a resource allocation problem.
+
 
 ## Formulating the question
 
@@ -76,6 +78,21 @@ Origen: Conversación con Bing, 5/4/2023(1) Minimum number of cameras required t
 (2) Solving the k-dominating set problem on very large-scale networks .... https://computationalsocialnetworks.springeropen.com/articles/10.1186/s40649-020-00078-5 Con acceso 5/4/2023.
 (3) Minimum-dominating set problem, Competitive programming. https://stackoverflow.com/questions/75804494/minimum-dominating-set-problem-competitive-programming Con acceso 5/4/2023.
 
+## Conclusion
+
+There were several errors in the proposed solution.
+
+I had to change `nodes` from an array to a Set for convenience.
+
+The main error is that covered/dominated elements weren't supressed.
+
+```js
+    // Added by human. Missed this line
+    for (const neighbor of graph[bestNode]) {
+      //console.log(`Removing node ${neighbor} from the graph`);
+      nodes.delete(String(neighbor));
+    }
+```
 
 ## First instance
 
