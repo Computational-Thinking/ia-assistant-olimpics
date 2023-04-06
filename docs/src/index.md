@@ -126,7 +126,18 @@ En este repositorio existen las siguientes ramas:
 Aunque la idea es correcta, cuando se ejecuta el programa que proporciona, los resultados son erróneos.
 * La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos.
 * La rama `chat-gpt3-human-sortedbynumedges` es una modiicación de la solución en `chat-gpt-3-human` con una modificación que ordena primero ls islas por número de puentes y después aplica el algoritmo de coloración encontrado por chat-gpt-3.
-* La rama [chat-gpt-4](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4) contiene la solución propuesta por chat-gpt-4. Los resultados proveídos son erróneos.
+* La rama [chat-gpt-4](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4) contiene la solución propuesta por chat-gpt-4. 
+Ofrece la misma aproximación que 3, pero se ecplcia mejor:
+*Para resolver este problema, se puede utilizar el algoritmo 
+de coloración de grafos, que consiste en asignar un color a 
+cada vértice de tal forma que dos vértices adyacentes 
+no tengan el mismo color. En este caso, los vértices representan 
+las islas y las aristas representan los puentes.
+El número mínimo de hospitales necesarios es igual al 
+número cromático del grafo, es decir, 
+el número mínimo de colores necesarios para colorear el 
+grafo de tal forma que dos vértices adyacentes no tengan el mismo color.*
+Al igual que con gpt-3, los resultados proveídos por el programa son erróneos.
 * La rama `chat-gpt-4-human` contiene la solución propuesta por chat-gpt-4 modificada por un programador para que la salida muestre resultados correctos.
 * La rama `chat-gpt-4-allocation-problem` contiene la solución propuesta por chat-gpt-4 y modificada por un programador a partir de una reformulación del problema diferente a la del enunciado usado en la olimpiada. `chat-gpt-4` provee en este caso un algoritmo heurístico con backtracking.
 * Esta rama: la rama `main` la hemos usado para la documentación y el blog.
