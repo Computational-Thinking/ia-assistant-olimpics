@@ -23,7 +23,7 @@ Para medir las capacidades de los asistentes IA planteamos un problema de las Ol
 
 ### Primer caso
 
-El primer ejemplo que puede encontrar en el fichero [input.txt](/input-examples/input.txt) es 
+El primer ejemplo que puede encontrar en el fichero [input.txt](/input-examples/input.txt) es
 
 ```
 10 6
