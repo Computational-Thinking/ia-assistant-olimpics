@@ -121,10 +121,12 @@ En este repositorio existen las siguientes ramas:
 * main
 ```
 
-* La rama `chat-gpt-3` contiene la solución propuesta por chat-gpt-3. Los resultados proveídos son erróneos.
-* La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre resultados correctos.
+* La rama [chat-gpt-3](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-3) contiene la solución propuesta por chat-gpt-3.  Esta es la idea que usa:
+*Una posible solución al problema es utilizar el algoritmo de coloración de grafos conocido como "Greedy Coloring". La idea es ir asignando un color a cada isla de tal forma que islas adyacentes no tengan el mismo color. El número mínimo de colores necesarios para colorear todas las islas es entonces igual al número mínimo de hospitales necesarios*. 
+Aunque la idea es correcta, cuando se ejecuta el programa que proporciona, los resultados son erróneos.
+* La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos.
 * La rama `chat-gpt3-human-sortedbynumedges` es una modiicación de la solución en `chat-gpt-3-human` con una modificación que ordena primero ls islas por número de puentes y después aplica el algoritmo de coloración encontrado por chat-gpt-3.
-* La rama `chat-gpt-4` contiene la solución propuesta por chat-gpt-4. Los resultados proveídos son erróneos.
+* La rama [chat-gpt-4](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4) contiene la solución propuesta por chat-gpt-4. Los resultados proveídos son erróneos.
 * La rama `chat-gpt-4-human` contiene la solución propuesta por chat-gpt-4 modificada por un programador para que la salida muestre resultados correctos.
 * La rama `chat-gpt-4-allocation-problem` contiene la solución propuesta por chat-gpt-4 y modificada por un programador a partir de una reformulación del problema diferente a la del enunciado usado en la olimpiada. `chat-gpt-4` provee en este caso un algoritmo heurístico con backtracking.
 * Esta rama: la rama `main` la hemos usado para la documentación y el blog.
