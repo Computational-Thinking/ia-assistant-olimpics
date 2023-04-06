@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "deploy": "vuepress build src && gh-pages -d src/.vuepress/dist"
+    "deploy": "npm run build && gh-pages -d src/.vuepress/dist",
+    "publish": "git ci -am 'publish' && git push && npm run deploy"
   },
   "license": "MIT",
   "devDependencies": {
