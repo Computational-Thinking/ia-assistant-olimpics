@@ -108,3 +108,4 @@ y que puede resolverse con solo 2 hospitales.
 
 ## Referencias
 
+* [jutge.org](https://jutge.org/problems/P31958_es)
