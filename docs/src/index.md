@@ -3,9 +3,17 @@ title: Uso de Asistentes IA en concursos de Programación
 sidebar: auto
 ---
 
+### Coromoto León-Hernandez. Casiano  Rodriguez-Leon 
+
+Universidad de La Laguna
+
+## Introducción
+
+Desde que GitHub introdujo GitHub copilot en Junio de 2021 y en los cursos 21/22 y 22/23 hemos estado usando no sólo GH Copilot sin también Chat-GPT-3 y 4 en nuestra docencia, en la elaboración y preparación de clases, ejercicios y prácticas e investigando como los alumnos pueden beneficiarse de los mismos. Con la  añadido Chat-GPT en sus versiones 3 y 4.
+
 ## Objetivos
 
-Este repositorio y este artículo contienen el material, informe y conclusiones 
+Este [repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics) y este [artículo](https://computational-thinking.github.io/ia-assistant-olimpics/) contienen el material, informe y conclusiones 
 de una investigación que nos planteamos los autores sobre el uso de los asistentes IA en la enseñanza de la programación.
 
 Nuestro objetivo es evaluar y comparar las capacidades de los diferentes asistentes IA para proveer soluciones a problemas como los que se plantean en la enseñanza de la programación.
@@ -93,7 +101,9 @@ El tercer ejemplo que puede encontrar en el fichero [input3.txt](/input-examples
 1 3
 1 4
 ```
-whose graph is:
+
+Cuyo grafo es:
+
 
 ```mermaid
 graph LR
@@ -108,7 +118,7 @@ y que puede resolverse con solo 2 hospitales.
 
 ## Experimentos
 
-En este repositorio existen las siguientes ramas que se corresponden a diferentes experimentos:
+En este repositorio existen las siguientes ramas que se corresponden a diferentes experimentos con diferentes IAs:
 
 ```
 ➜  docs git:(main) ✗ git -P branch
@@ -120,6 +130,13 @@ En este repositorio existen las siguientes ramas que se corresponden a diferente
   chat-gpt3-human-sortedbynumedges
 * main
 ```
+
+### GitHub Copilot
+
+GitHub Copilot no fue capaz de entender la formulación del problema ni de hacer ningún progreso. Cuando se le formula entra en un bucle enloquecido en el que repite los mismo comentarios una y otra vez.
+
+No hemos podido probar la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4.
+
 
 ### Las ramas chat-gpt-3 del repo Computational-Thinking/ia-assistant-olimpics
 
@@ -172,3 +189,5 @@ En la rama `main` se documenta la experiencia.
 ## Referencias
 
 * [jutge.org](https://jutge.org/problems/P31958_es)
+* [GitHub Copilot AI pair programmer: Asset or Liability?](https://arxiv.org/pdf/2206.15331.pdf) Arghavan Moradi Dakhel, Vahid Majdinasab, Amin Nikanjam, Foutse Khomh, Michel C. Desmarais, Zhen Ming (Jack)Jiang Jun 2022
+* James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. 2022. [The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming](https://dl.acm.org/doi/10.1145/3511861.3511863#sec-comments). In Proceedings of the 24th Australasian Computing Education Conference (ACE '22). Association for Computing Machinery, New York, NY, USA, 10–19. <https://doi.org/10.1145/3511861.3511863>
