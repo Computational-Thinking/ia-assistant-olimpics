@@ -118,7 +118,7 @@ y que puede resolverse con solo 2 hospitales.
 
 ## Experimentos
 
-En este repositorio existen las siguientes ramas que se corresponden a diferentes experimentos con diferentes IAs:
+En este [repositorio][Repositorio] existen las siguientes ramas que se corresponden a diferentes experimentos con diferentes IAs:
 
 ```
 ➜  docs git:(main) ✗ git -P branch
@@ -136,7 +136,7 @@ En este repositorio existen las siguientes ramas que se corresponden a diferente
 Como señala [Pastor Marzo 2023][Pastor] 
 > De hecho, tras la prueba (Brais) confirmaba cómo Copilot "tiene un enfoque más orientado a resolver tareas cotidianas basado en código semejante ya publicado". Es algo que ya se conocía, pero GitHub Copilot básicamente hace un copia/pega de algo que ya ha hecho literalmente otra persona. Al asistente de GitHub "se le da peor entender una premisa compleja".
 
-Esta capacidad da lugar a que ocurran anécdotas como en esta clase de Procesadores de Lenguajes impartida el 24 de Mayo de 2022 en la que realizamos un examen en el que se pide que construyamos un traductor para el lenguaje de las expresiones regulares. GH Copilot se adelanta en varias ocasiones a los alumnos en dar la respuesta correcta a las preguntas del profesor (Véase por ejemplo minutos del 30 al 32)
+Esta capacidad da lugar a que ocurran anécdotas como en esta clase de Procesadores de Lenguajes impartida el 24 de Mayo de 2022 en la que estudiamos como realizar un examen en el que se pide que construyamos un traductor para el lenguaje de las expresiones regulares. GH Copilot se adelanta en varias ocasiones a los alumnos en dar la respuesta correcta a las preguntas del profesor (Véase por ejemplo minutos del 30 al 32)
 
 <youtube id="bxadjvhtffs"></youtube>
 
@@ -197,13 +197,15 @@ En la rama `main` se documenta la experiencia.
 ## Referencias
 
 * [jutge.org](https://jutge.org/problems/P31958_es)
+* Repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics)
 * [GitHub Copilot AI pair programmer: Asset or Liability?](https://arxiv.org/pdf/2206.15331.pdf) Arghavan Moradi Dakhel, Vahid Majdinasab, Amin Nikanjam, Foutse Khomh, Michel C. Desmarais, Zhen Ming (Jack)Jiang Jun 2022
 * James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. 2022. [The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming](https://dl.acm.org/doi/10.1145/3511861.3511863#sec-comments). In Proceedings of the 24th Australasian Computing Education Conference (ACE '22). Association for Computing Machinery, New York, NY, USA, 10–19. <https://doi.org/10.1145/3511861.3511863>
 * [Copilot, ChatGPT y GPT-4 han cambiado el mundo de la programación para siempre. Esto opinan los programadores](https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos). Javier Pastor. 28 Marzo 20223. Entrevista con Brais Moore y Miguel Angel Durán. Xataca.com
-* Seminario sobre inteligencia artificial y docencia universitaria
+* Seminario sobre inteligencia artificial y docencia universitaria de la ULL
   
   <youtube id="Os2fNi5LXZQ"></youtube>
 
   30 de Marzo 2023
 
 [Pastor]: https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos
+[Repositorio]: https://github.com/Computational-Thinking/ia-assistant-olimpics
