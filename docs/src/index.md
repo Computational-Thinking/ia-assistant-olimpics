@@ -205,7 +205,7 @@ colors=[0,1,0,0,1,0,0,1,0,1]
 4
 ```
 
-La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos. En el siguiente código aparecen en rojo las modificaciones hechas por el humano y en verde como estaba la línea que propuso chat-gpt-3:
+La rama [chat-gpt-3-human][chat-gpt3-human] contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos. En el siguiente código coloreado aparecen en rojo las modificaciones hechas por el humano y en verde como estaba la línea que propuso chat-gpt-3:
 
 ```diff 
 // Función para obtener el número mínimo de hospitales
@@ -238,7 +238,18 @@ La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modifi
  }
  ```
 
-La rama `chat-gpt3-human-sortedbynumedges` es una modificación de la solución en `chat-gpt-3-human` con una modificación que ordena primero ls islas por número de puentes y después aplica el algoritmo de coloración encontrado por chat-gpt-3.
+La rama [chat-gpt3-human-sortedbynumedges][chat-gpt3-human-sortedbynumedges] es una modificación de la solución en `chat-gpt-3-human` con una modificación que ordena primero las islas por número de puentes y después aplica el algoritmo de coloración encontrado por chat-gpt-3 lo que hace que mejore en el primer caso de 6 a 5:
+
+```
+➜  P31958_es git:(human) node chat-gpt3-solution.js           
+n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]] numNeighbors = [1,1,0,1,2,1,1,2,2,1]
+Coloring island 4 with color 0. numComponents=1
+Coloring island 7 with color 0. numComponents=2
+Coloring island 0 with color 0. numComponents=3
+Coloring island 2 with color 0. numComponents=4
+colors=[0,1,0,1,0,1,1,0,1,0]
+Hospitals: [0,2,4,7,9], numHospitals: 5
+```
 
 ### Chat-GPT-4 
 
@@ -290,3 +301,6 @@ En la rama `main` se documenta la experiencia.
 [Repositorio]: https://github.com/Computational-Thinking/ia-assistant-olimpics
 [P31958_es]: https://jutge.org/problems/P31958_es
 [chat-gpt3]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt-3/chat-gpt3-solution.js
+[chat-gpt3-human]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt3-human/chat-gpt3-solution.js#L87-L118
+
+[chat-gpt3-human-sortedbynumedges]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt3-human-sortbynumedges/chat-gpt3-solution.js#L115-L116
