@@ -154,8 +154,56 @@ La rama [chat-gpt-3](https://github.com/Computational-Thinking/ia-assistant-olim
 Una posible solución al problema es utilizar el algoritmo de coloración de grafos conocido como "Greedy Coloring". La idea es ir asignando un color a cada isla de tal forma que islas adyacentes no tengan el mismo color. El número mínimo de colores necesarios para colorear todas las islas es entonces igual al número mínimo de hospitales necesarios
 ::: 
 
-Aunque la idea es correcta, cuando se ejecuta el programa que proporciona, los resultados son erróneos.
+Aunque la idea es correcta, La solución proveída por [chat-gpt-3][chat-gpt3]
 
+```js{21}
+function getMinHospitals(n, edges) {
+  const colors = new Array(n).fill(-1); // Array para almacenar los colores asignados a cada isla
+  let numHospitals = 0; // Contador de hospitales
+
+  // Función auxiliar para asignar un color a una isla y sus vecinas
+  function colorIsland(island, color) {
+    colors[island] = color;
+    for (const [i, j] of edges) {
+      if (i === island && colors[j] === -1) {
+        colorIsland(j, 1 - color); // Asignar un color distinto al de la isla adyacente
+      } else if (j === island && colors[i] === -1) {
+        colorIsland(i, 1 - color); // Asignar un color distinto al de la isla adyacente
+      }
+    }
+  }
+
+  // Recorrer todas las islas y asignar colores si aún no se ha hecho
+  for (let i = 0; i < n; i++) {
+    if (colors[i] === -1) {
+      colorIsland(i, 0); // Asignar el color "0" a la isla actual y sus vecinas
+      numHospitals++; // Añadir un hospital por cada conjunto de islas con el mismo color
+      // added by human
+      console.log(`Coloring island ${i} with color 0. numHospitals=${numHospitals}`)
+    }
+  }
+
+  // added by human
+  console.log(`colors=${JSON.stringify(colors)}`);
+
+  return numHospitals;
+}
+```
+incrementa `numHospitals` cada vez que se encuentra una nueva componente conexa.
+Cuando se ejecuta el programa que proporciona, los resultados son erróneos.
+
+Cuando lo ejecutamos con la entrada en el archivo [input.txt](#primer-caso) obtenemos:
+
+```
+➜  P31958_es git:(understanding-2nd-attempt) ✗ node chat-gpt3-solution.js
+n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]]
+Coloring island 0 with color 0. numHospitals=1
+Coloring island 2 with color 0. numHospitals=2
+Coloring island 3 with color 0. numHospitals=3
+Coloring island 6 with color 0. numHospitals=4
+colors=[0,1,0,0,1,0,0,1,0,1]
+4
+```
 
 La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos.
 
@@ -210,3 +258,4 @@ En la rama `main` se documenta la experiencia.
 [Pastor]: https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos
 [Repositorio]: https://github.com/Computational-Thinking/ia-assistant-olimpics
 [P31958_es]: https://jutge.org/problems/P31958_es
+[chat-gpt3]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt-3/chat-gpt3-solution.js
