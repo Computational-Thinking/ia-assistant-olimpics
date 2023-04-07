@@ -146,7 +146,7 @@ GitHub Copilot no fue capaz de entender la formulación del problema ni de hacer
 No hemos podido probar la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4.
 
 
-### Las ramas chat-gpt-3 del repo Computational-Thinking/ia-assistant-olimpics
+### Chat-GPT-3
 
 La rama [chat-gpt-3](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-3) contiene la solución propuesta por chat-gpt-3.  Esta es la idea que usa:
 
@@ -161,7 +161,7 @@ La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modifi
 
 La rama `chat-gpt3-human-sortedbynumedges` es una modificación de la solución en `chat-gpt-3-human` con una modificación que ordena primero ls islas por número de puentes y después aplica el algoritmo de coloración encontrado por chat-gpt-3.
 
-### Las ramas chat-gpt-4 del repo Computational-Thinking/ia-assistant-olimpics
+### Chat-GPT-4 
 
 La rama [chat-gpt-4](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4) contiene la solución propuesta por chat-gpt-4. 
 Ofrece la misma aproximación que 3, pero se explica mejor:
