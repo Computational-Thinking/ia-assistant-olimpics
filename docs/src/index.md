@@ -205,7 +205,38 @@ colors=[0,1,0,0,1,0,0,1,0,1]
 4
 ```
 
-La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos.
+La rama `chat-gpt-3-human` contiene la solución propuesta por chat-gpt-3 modificada por un programador para que la salida muestre los resultados correctos. En el siguiente código aparecen en rojo las modificaciones hechas por el humano y en verde como estaba la línea que propuso chat-gpt-3:
+
+```diff 
+// Función para obtener el número mínimo de hospitales
+-function getHospitals(n, edges) {
++function getMinHospitals(n, edges) {
+   const colors = new Array(n).fill(-1); // Array para almacenar los colores asignados a cada isla
+-  let numComponents = 0; // Contador de hospitales
++  let numHospitals = 0; // Contador de hospitales
+ 
+   // Función auxiliar para asignar un color a una isla y sus vecinas
+   function colorIsland(island, color) {
+@@ -104,21 +87,20 @@ function getHospitals(n, edges) {
+   for (let i = 0; i < n; i++) {
+     if (colors[i] === -1) {
+       colorIsland(i, 0); // Asignar el color "0" a la isla actual y sus vecinas
+-      numComponents++; // Añadir un hospital por cada conjunto de islas con el mismo color
++      numHospitals++; // Añadir un hospital por cada conjunto de islas con el mismo color
+       // added by human
+-      console.log(`Coloring island ${i} with color 0. numComponents=${numComponents}`)
++      console.log(`Coloring island ${i} with color 0. numHospitals=${numHospitals}`)
+     }
+   }
+ 
+   // added by human
+   console.log(`colors=${JSON.stringify(colors)}`);
+ 
+-  // Modified by human
+-  return [...colors.keys()].filter(i => colors[i] == 0);
++  return numHospitals;
+ }
+ ```
 
 La rama `chat-gpt3-human-sortedbynumedges` es una modificación de la solución en `chat-gpt-3-human` con una modificación que ordena primero ls islas por número de puentes y después aplica el algoritmo de coloración encontrado por chat-gpt-3.
 
