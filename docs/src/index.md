@@ -253,8 +253,7 @@ Hospitals: [0,2,4,7,9], numHospitals: 5
 
 ### Chat-GPT-4 
 
-La rama [chat-gpt-4](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4) contiene la solución propuesta por chat-gpt-4. 
-Ofrece la misma aproximación que 3, pero se explica mejor:
+La rama [chat-gpt-4-human](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4-human) contiene una solución propuesta por chat-gpt-4. 
 
 ::: tip Propuesta de chat-gpt-4
 Para resolver este problema, se puede utilizar el algoritmo 
@@ -271,15 +270,104 @@ grafo de tal forma que dos vértices adyacentes no tengan el mismo color.
 Además proporciona citas:
 
 ::: tip Citas
-* Origen: Conversación con Bing, 4/4/2023(1) Fundamentos de JavaScript - Aprende sobre desarrollo web | MDN - Mozilla. https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics Con acceso 4/4/2023.
-* (2) Ejemplos prácticos de Javascript (I) | Observatorio Tecnológico. http://recursostic.educacion.es/observatorio/web/gl/software/programacion/490-lorena-arranz Con acceso 4/4/2023.
-* (3) JavaScript - Technical University of Valencia. https://lemus.webs.upv.es/wordpress/wp-content/uploads/2018/07/javascript-es6-ejercicios-resueltos-parte-1.pdf Con acceso 4/4/2023.
+* Origen: Conversación con Bing, 4/4/2023(1) Leer archivos en JavaScript. https://web.dev/i18n/es/read-files/ Con acceso 4/4/2023.
+* (2) Leer archivo de texto en JavaScript | Delft Stack. https://www.delftstack.com/es/howto/javascript/read-text-file-in-javascript/ Con acceso 4/4/2023.
+* (3) Leer archivo línea por línea en JavaScript | Delft Stack. https://www.delftstack.com/es/howto/javascript/javascript-read-file-line-by-line/ Con acceso 4/4/2023.
+* (4) Cómo leer un archivo de texto con código de Javascript en HTML (En 6 .... https://techlandia.com/leer-archivo-texto-codigo-javascript-html-como_43910/ Con acceso 4/4/2023.
+* (5) html - ¿Cómo leer un archivo .txt desde JavaScript? - Stack Overflow en .... https://es.stackoverflow.com/questions/54734/c%C3%B3mo-leer-un-archivo-txt-desde-javascript Con acceso 4/4/2023.
+* (6) Lectura de archivos con JavaScript - Stack Overflow en español. https://es.stackoverflow.com/questions/193178/lectura-de-archivos-con-javascript Con acceso 4/4/2023.
+* (7) Cómo leer un archivo de texto con código de Javascript en HTML (En 6 .... https://techlandia.com/leer-archivo-texto-codigo-javascript-html-como_43910/ Con acceso 4/4/2023.
 ::: 
 
-Sin embargo, **al igual que con gpt-3, los resultados proveídos por el programa son erróneos**.
+La solución en la rama [chat-gpt-4-human][chat-gpt-4-human] contiene una ligera modificación de una solución proveída por chat-gpt-4 después de solicitarle una segunda respuesta. En este caso provee una heurística basada en un algoritmo Depth First Search:
 
-* La rama `chat-gpt-4-human` contiene la solución propuesta por chat-gpt-4 modificada por un programador para que la salida muestre resultados correctos.
-* La rama `chat-gpt-4-allocation-problem` contiene la solución propuesta por chat-gpt-4 y modificada por un programador a partir de una reformulación del problema diferente a la del enunciado usado en la olimpiada. `chat-gpt-4` provee en este caso un algoritmo heurístico con backtracking.
+```js
+function DFS(p, v, visited, adj, colors) {
+    visited[v] = true;
+    colors[v] = (p !== null)? 1 - colors[p] : 0;
+    console.error(`coloring ${v} of color ${colors[v]} with parent ${p}`)
+    for (let i = 0; i < adj[v].length; i++) {
+        if (!visited[adj[v][i]]) {
+            DFS(v, adj[v][i], visited, adj, colors);
+        }
+    }
+}
+
+function minHospitals(n, edges) {
+    let adj = new Array(n).fill(null).map(() => []);
+    let visited = new Array(n).fill(false);
+    let colors = new Array(n).fill(null);
+
+    let numComponents = 0;
+    for (let i = 0; i < edges.length; i++) {
+        let u = edges[i][0];
+        let v = edges[i][1];
+        adj[u].push(v);
+        adj[v].push(u);
+    }
+    for (let i = 0; i < n; i++) {
+        if (!visited[i]) {
+            DFS(null, i, visited, adj, colors);
+            numComponents++;
+        }
+    }
+    return { numComponents, colors, numHospitals: colors.filter(c => c == 0).length };
+}
+```
+
+La rama `chat-gpt-4-human` ha sido  modificada por un programador para que la salida muestre resultados correctos.
+
+```
+➜  chat-gpt-4 git:(chat-gpt-4-human) node chat-gpt4-solution.js input.txt 
+n = 10, p = 6, edges = [[0,1],[3,4],[4,5],[6,7],[7,8],[8,9]]}
+coloring 0 of color 0 with parent null
+coloring 1 of color 1 with parent 0
+coloring 2 of color 0 with parent null
+coloring 3 of color 0 with parent null
+coloring 4 of color 1 with parent 3
+coloring 5 of color 0 with parent 4
+coloring 6 of color 0 with parent null
+coloring 7 of color 1 with parent 6
+coloring 8 of color 0 with parent 7
+coloring 9 of color 1 with parent 8
+{
+  numComponents: 4,
+  colors: [
+    0, 1, 0, 0, 1,
+    0, 0, 1, 0, 1
+  ],
+  numHospitals: 6
+}
+➜  chat-gpt-4 git:(chat-gpt-4-human) node chat-gpt4-solution.js input2.txt
+n = 9, p = 8, edges = [[0,4],[7,0],[3,5],[8,6],[1,6],[2,8],[4,1],[5,1]]}
+coloring 0 of color 0 with parent null
+coloring 4 of color 1 with parent 0
+coloring 1 of color 0 with parent 4
+coloring 6 of color 1 with parent 1
+coloring 8 of color 0 with parent 6
+coloring 2 of color 1 with parent 8
+coloring 5 of color 1 with parent 1
+coloring 3 of color 0 with parent 5
+coloring 7 of color 1 with parent 0
+{
+  numComponents: 1,
+  colors: [
+    0, 0, 1, 0, 1,
+    1, 1, 1, 0
+  ],
+  numHospitals: 4
+}
+➜  chat-gpt-4 git:(chat-gpt-4-human) node chat-gpt4-solution.js input3.txt
+n = 5, p = 4, edges = [[0,2],[2,1],[1,3],[1,4]]}
+coloring 0 of color 0 with parent null
+coloring 2 of color 1 with parent 0
+coloring 1 of color 0 with parent 2
+coloring 3 of color 1 with parent 1
+coloring 4 of color 1 with parent 1
+{ numComponents: 1, colors: [ 0, 0, 1, 1, 1 ], numHospitals: 2 }
+```
+
+La rama `chat-gpt-4-allocation-problem` contiene la solución propuesta por chat-gpt-4 y modificada por un programador a partir de una reformulación del problema diferente a la del enunciado usado en la olimpiada. `chat-gpt-4` provee en este caso un algoritmo heurístico con backtracking.
 
 En la rama `main` se documenta la experiencia.
 
@@ -304,3 +392,6 @@ En la rama `main` se documenta la experiencia.
 [chat-gpt3-human]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt3-human/chat-gpt3-solution.js#L87-L118
 
 [chat-gpt3-human-sortedbynumedges]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt3-human-sortbynumedges/chat-gpt3-solution.js#L115-L116
+
+[chat-gpt-4]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt-4/chat-gpt4-solution.js#L41-L68
+[chat-gpt-4-human]: https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/chat-gpt-4-human/chat-gpt4-solution.js#L17-L47
