@@ -253,7 +253,7 @@ Hospitals: [0,2,4,7,9], numHospitals: 5
 
 ### Chat-GPT-4 
 
-La rama [chat-gpt-4-human](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4-human) contiene una solución propuesta por chat-gpt-4. 
+La rama [chat-gpt-4-human](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/chat-gpt-4-human) contiene una solución propuesta por chat-gpt-4. La respuesta de gpt-4 es parecida a la de gpt-3: 
 
 ::: tip Propuesta de chat-gpt-4
 Para resolver este problema, se puede utilizar el algoritmo 
@@ -267,7 +267,7 @@ el número mínimo de colores necesarios para colorear el
 grafo de tal forma que dos vértices adyacentes no tengan el mismo color.
 :::
 
-Además proporciona citas:
+Una diferencia con gpt-3 es que proporciona fuentes:
 
 ::: tip Citas
 * Origen: Conversación con Bing, 4/4/2023(1) Leer archivos en JavaScript. https://web.dev/i18n/es/read-files/ Con acceso 4/4/2023.
@@ -371,7 +371,11 @@ La rama `chat-gpt-4-allocation-problem` contiene la solución propuesta por chat
 
 En la rama `main` se documenta la experiencia.
 
+## Conclusiones
 
+GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GPT-3 como 4 son capaces de encontrar un patrón/isomorfismo del problema con el problema de coloración y hacer una propuesta de código. 
+En ambos casos la propuesta contiene errores que pueden ser resueltos por un humano sin mucho esfuerzo.
+ 
 ## Referencias
 
 * [jutge.org: Problema P31958_es](https://jutge.org/problems/P31958_es)
