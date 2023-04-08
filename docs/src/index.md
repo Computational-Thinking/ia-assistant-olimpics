@@ -373,8 +373,8 @@ En la rama `main` se documenta la experiencia.
 
 ## Conclusiones
 
-GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GPT-3 como 4 son capaces de encontrar un patrón/isomorfismo del problema con el problema de coloración y hacer una propuesta de código. 
-En ambos casos la propuesta contiene errores que pueden ser resueltos por un humano sin mucho esfuerzo.
+GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GPT-3 como 4 son capaces de encontrar un patrón/isomorfismo del problema del concurso con el problema de coloración y hacer una propuesta de código. 
+En ambos casos la propuesta contiene errores que pueden ser resueltos por un humano sin mucho esfuerzo. GPT-4 explica mejor la propuesta y ofrece referencias a fuentes de consulta.
  
 ## Referencias
 
