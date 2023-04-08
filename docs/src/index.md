@@ -9,14 +9,14 @@ Universidad de La Laguna
 
 ## Introducción
 
-Desde que GitHub introdujo GitHub copilot en Junio de 2021 y en los cursos 21/22 y 22/23 hemos estado usando no sólo GH Copilot sino también Chat-GPT-3 y Chat-GPT-4 en nuestra docencia, en la elaboración y preparación de clases, ejercicios y prácticas e investigando como los alumnos pueden beneficiarse de los mismos. 
+Desde que GitHub introdujo GitHub Copilot en Junio de 2021 y en los cursos 21/22 y 22/23 hemos estado usando no sólo GH Copilot sino también Chat-GPT-3 y Chat-GPT-4 en nuestra docencia, en la elaboración y preparación de clases, ejercicios y prácticas e investigando como los alumnos pueden beneficiarse de los mismos. 
 
 ## Objetivos
 
-Este [repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics) y este [artículo](https://computational-thinking.github.io/ia-assistant-olimpics/) contienen el material, informe y conclusiones 
-de una investigación que nos planteamos los autores sobre el uso de los asistentes IA en la enseñanza de la programación.
-
 Nuestro objetivo es evaluar y comparar las capacidades de los diferentes asistentes IA para proveer soluciones a problemas como los que se plantean en la enseñanza de la programación.
+
+El material de este trabajo se aloja en el [repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics) de GitHub. En la rama `main` del mismo se encuentran los fuentes de este [artículo](https://computational-thinking.github.io/ia-assistant-olimpics/) contienendo el material, informe y conclusiones de un experimento-investigación que nos planteamos los autores sobre el uso de los asistentes IA en la enseñanza de la programación.
+
 
 ### Asistentes IA utilizados
 
@@ -381,6 +381,28 @@ En ambos casos la propuesta contiene errores que pueden ser resueltos por un hum
 * [jutge.org: Problema P31958_es](https://jutge.org/problems/P31958_es)
 * [Repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics)
 * [Uso de Asistentes IA en concursos de Programación](https://computational-thinking.github.io/ia-assistant-olimpics/) C. León y C. Rodríguez. 2023.
+* **First Contact** 
+  
+  Sparks of AGI: early experiments with GPT-4 by Sebastien Bubeck
+  
+  <youtube id="qbIk7-JPB2c"></youtube>
+  - [1:47](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=107s) – Sebastien starts 
+  - [5:36](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=336s) – goal of the talk: there is some intelligence in the system 
+  - [6:05](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=365s) – “beware of trillion-dimensional space and its surprises” 
+  - [8:20](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=500s) – example demonstrating GPT4’s common sense 
+  - [10:40](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=640s) – theory of the mind
+  - [12:29](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=749s) – theory of mind example
+  - [14:27](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=867s) – consensus definition of intelligence by psychologists published in 1994 and if GPT4 matches this definition
+  - [18:00](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=1080s) – how to test GPT4’s intelligence 
+  - [19:00](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=1140s) – Asking GP4 to write a proof of infinitude of primes 
+  - [22:13](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=1333s) – The Strange Case of the Unicorn 
+  - [27:15](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=1635s) – GPT4 vs Stable Diffusion 
+  - [29:44](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=1784s) – Coding with a copilot that understands 
+  - [32:57](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=1977s) – GPT4’s performance on coding interviews 
+  - [33:41](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=2021s) – GPT4’s weaknesses, which can be overcome with tools 
+  - [36:09](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=2169s) – A mathematical conversation with GPT4 
+  - [42:40](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=2560s) – GPT4 cannot do true planning 
+  - [45:02](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=2702s) – Is GPT4 intelligent and does it matter?
 * [GitHub Copilot AI pair programmer: Asset or Liability?](https://arxiv.org/pdf/2206.15331.pdf) Arghavan Moradi Dakhel, Vahid Majdinasab, Amin Nikanjam, Foutse Khomh, Michel C. Desmarais, Zhen Ming (Jack)Jiang Jun 2022
 * James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. 2022. [The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming](https://dl.acm.org/doi/10.1145/3511861.3511863#sec-comments). In Proceedings of the 24th Australasian Computing Education Conference (ACE '22). Association for Computing Machinery, New York, NY, USA, 10–19. <https://doi.org/10.1145/3511861.3511863>
 * [Copilot, ChatGPT y GPT-4 han cambiado el mundo de la programación para siempre. Esto opinan los programadores](https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos). Javier Pastor. 28 Marzo 20223. Entrevista con Brais Moore y Miguel Angel Durán. Xataca.com
