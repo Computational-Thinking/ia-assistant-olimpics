@@ -21,7 +21,7 @@ Los modelos de transformador aplican un conjunto evolutivo de técnicas matemát
 
 Los transformadores usan codificadores posicionales para etiquetar elementos de datos que entran y salen de la red. 
 
-![](/images/Transformer-model-example-aidan-gomez-1280x763.png)
+![/images/Transformer-model-example-aidan-gomez-1280x763.png](/images/Transformer-model-example-aidan-gomez-1280x763.png)
 
 Las *unidades de atención* siguen estas etiquetas, calculando una especie de mapa algebraico de cómo cada elemento se relaciona con los demás.
 
