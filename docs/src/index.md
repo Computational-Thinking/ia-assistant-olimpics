@@ -21,7 +21,7 @@ Los modelos de transformador aplican un conjunto evolutivo de técnicas matemát
 
 Los transformadores usan codificadores posicionales para etiquetar elementos de datos que entran y salen de la red. 
 
-![/images/Transformer-model-example-aidan-gomez-1280x763.png](/images/Transformer-model-example-aidan-gomez-1280x763.png)
+![images/Transformer-model-example-aidan-gomez-1280x763.png](images/Transformer-model-example-aidan-gomez-1280x763.png)
 
 Las *unidades de atención* siguen estas etiquetas, calculando una especie de mapa algebraico de cómo cada elemento se relaciona con los demás.
 
@@ -400,7 +400,7 @@ Use ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como di
 
 A día de hoy, la IA no reemplaza al especialista. En su lugar, debe pensar en la IA como una herramienta o un miembro del equipo/equipamiento, y tener en cuenta que siempre hay que revisar cuidadosamente los resultados generados por la IA. 
 
-![/images/ai-will-take-my-job.webp](/images/ai-will-take-my-job.webp)
+![/images/ai-will-take-my-job.webp](images/ai-will-take-my-job.webp)
 
 La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un humano que comprenda tanto el problema como las capacidades de la IA.
 
