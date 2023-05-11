@@ -27,7 +27,7 @@ Las *unidades de atención* siguen estas etiquetas, calculando una especie de ma
 
 Las consultas de atención generalmente se ejecutan en paralelo mediante el cálculo de una matriz de ecuaciones en lo que se denomina atención de múltiples cabezas.
 
-GitHub Copilot es una aplicación LLM que se integra en la IDE de desarrollo y que utiliza IA generativa para proporcionar sugerencias de código en una gran variedad de lenguajes de programación, incluidos Python, JavaScript, TypeScript, Ruby, Go, Rust, PHP y C#.
+GitHub Copilot es una aplicación LLM que se integra en la IDE del desarrollador (VSCode por ejemplo) y que  a partir de los comentarios en lenguaje natural (inglés, español, ucraniano, etc.) y del código existente en la carpeta de trabajo (*workspace*) usa IA generativa para proporcionar sugerencias de código en una gran variedad de lenguajes de programación, incluidos Python, JavaScript, TypeScript, Ruby, Go, Rust, PHP y C#.
 
 Desde que GitHub introdujo GitHub Copilot en Junio de 2021 y en los cursos 21/22 y 22/23 hemos estado usando no sólo GH Copilot sino también Chat-GPT-3 y Chat-GPT-4 en nuestra docencia, en la elaboración y preparación de clases, ejercicios y prácticas e investigando como los alumnos pueden beneficiarse de los mismos. 
 
