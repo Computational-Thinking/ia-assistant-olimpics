@@ -398,10 +398,6 @@ En ambos casos la propuesta contiene errores que pueden ser resueltos por un hum
  
 Use ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como dividir problemas en tareas más pequeñas, estimar la complejidad y generar plantillas de código. Luego use Copilot para generar código basado en dichas plantillas.
 
-Para acelerar las respuestas es conveniente que al comienzo de la conversación instruyamos al LLM para que proporcione respuestas en inglés, independientemente del idioma (o idiomas) que usemos en nuestras indicaciones. 
-
-Para la preparación de material comience con *Act as a tutor in ...*. Por ejemplo *Act as a  tutor of a computer science course in compilers. Ask me multiple choice questions about the use of [yacc](https://es.wikipedia.org/wiki/Yacc)* 
-
 A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, debe pensar en la IA como un miembro del equipo, y siempre hay que revisar cuidadosamente los resultados generados por la IA. 
 
 ![/images/ai-will-take-my-job.webp](/images/ai-will-take-my-job.webp)
