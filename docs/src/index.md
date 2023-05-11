@@ -9,6 +9,8 @@ Universidad de La Laguna
 
 ## Introducción
 
+Los modelos de IA generativa funcionan mediante el uso de redes neuronales para identificar patrones a partir de grandes conjuntos de datos para luego generar datos y/o contenidos. Los Large language models (LLM) son un tipo de modelo de IA generativa  que procesa y genera texto en lenguaje natural. Esto  ha sido posible en parte por la disponibilidad de grandes cantidades de datos de texto, como libros, sitios web, publicaciones y código en redes sociales. Estos datos se pueden utilizar para entrenar los modelos de manera que sean capaces de predecir y generar respuestas de lenguaje natural en una variedad de contextos. Como resultado, los grandes modelos de lenguaje tienen múltiples aplicaciones prácticas, como asistentes virtuales, chatbots o generadores de texto, como ChatGPT.
+
 Desde que GitHub introdujo GitHub Copilot en Junio de 2021 y en los cursos 21/22 y 22/23 hemos estado usando no sólo GH Copilot sino también Chat-GPT-3 y Chat-GPT-4 en nuestra docencia, en la elaboración y preparación de clases, ejercicios y prácticas e investigando como los alumnos pueden beneficiarse de los mismos. 
 
 ## Objetivos
@@ -376,6 +378,10 @@ En la rama `main` se documenta la experiencia.
 GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GPT-3 como 4 son capaces de encontrar un patrón/isomorfismo del problema del concurso con el problema de coloración y hacer una propuesta de código. 
 En ambos casos la propuesta contiene errores que pueden ser resueltos por un humano sin mucho esfuerzo. GPT-4 explica mejor la propuesta y ofrece referencias a fuentes de consulta.
  
+Use ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como dividir problemas en tareas más pequeñas, estimar la complejidad y generar plantillas de código. Luego use Copilot para generar código basado en dichas plantillas.
+
+A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, debe pensar en la IA como un miembro del equipo, y siempre hay que revisar cuidadosamente los resultados generados por la IA. La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un especialista que comprenda tanto el problema como las capcidades de la IA.
+
 ## Referencias
 
 * [jutge.org: Problema P31958_es](https://jutge.org/problems/P31958_es)
@@ -407,6 +413,7 @@ En ambos casos la propuesta contiene errores que pueden ser resueltos por un hum
 * [GitHub Copilot AI pair programmer: Asset or Liability?](https://arxiv.org/pdf/2206.15331.pdf) Arghavan Moradi Dakhel, Vahid Majdinasab, Amin Nikanjam, Foutse Khomh, Michel C. Desmarais, Zhen Ming (Jack)Jiang Jun 2022
 * James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. 2022. [The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming](https://dl.acm.org/doi/10.1145/3511861.3511863#sec-comments). In Proceedings of the 24th Australasian Computing Education Conference (ACE '22). Association for Computing Machinery, New York, NY, USA, 10–19. <https://doi.org/10.1145/3511861.3511863>
 * [Copilot, ChatGPT y GPT-4 han cambiado el mundo de la programación para siempre. Esto opinan los programadores](https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos). Javier Pastor. 28 Marzo 20223. Entrevista con Brais Moore y Miguel Angel Durán. Xataca.com
+* [Harness the power of generative AI for software development](https://github.com/readme/guides/coding-generative-ai) by Anton Mirhorodchenko
 * Seminario sobre inteligencia artificial y docencia universitaria de la ULL
   
   <youtube id="Os2fNi5LXZQ"></youtube>
