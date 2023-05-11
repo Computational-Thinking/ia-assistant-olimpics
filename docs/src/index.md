@@ -15,7 +15,7 @@ Su aparición ha sido posible en parte por la **disponibilidad de grandes cantid
 
 Otro avance que ha hecho posible los LLM es la aparición de las **redes adversarias generativas (GAN)** que pueden ser  utilizadas para la generación de texto, mediante el entrenamiento de dos redes neuronales, una que genera textos *"falsos"* (Generador) y otra que discrimina entre textos *"reales"* (generados por humanos) y falsos (Discriminador). Las dos redes se entrenan en competencia con el objetivo de mejorar la capacidad del generador para generar textos realistas.
 
-Otro componente de los LLM es que son **modelos basados en transformadores** descritos por primera vez en un artículo de Google de 2017: la red neuronal aprende el contexto y el significado mediante el seguimiento de las relaciones entre las palabras en la oración. Al encontrar patrones entre elementos matemáticamente, se elimina la necesidad de etiquetar los datos, haciendo posible procesar en paralelo los petabytes de datos de texto que existen en la web. 
+Otro componente de los LLM es que son **modelos basados en transformadores** descritos por primera vez en un [artículo de Google de 2017](https://arxiv.org/pdf/1706.03762.pdf): la red neuronal aprende el contexto y el significado mediante el seguimiento de las relaciones entre las palabras en la oración. Al encontrar patrones entre elementos matemáticamente, se elimina la necesidad de etiquetar los datos, haciendo posible procesar en paralelo los petabytes de datos de texto que existen en la web. 
 
 Los modelos de transformador aplican un conjunto evolutivo de técnicas matemáticas, llamadas *atención* o *autoatención*, para detectar patrones incluso entre elementos de datos distantes en una serie, que se influyen y dependen unos de otros.
 
@@ -433,6 +433,8 @@ A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, de
 * [Copilot, ChatGPT y GPT-4 han cambiado el mundo de la programación para siempre. Esto opinan los programadores](https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos). Javier Pastor. 28 Marzo 20223. Entrevista con Brais Moore y Miguel Angel Durán. Xataca.com
 * [Harness the power of generative AI for software development](https://github.com/readme/guides/coding-generative-ai) by Anton Mirhorodchenko
 * [What Is a Transformer Model?](https://blogs.nvidia.com/blog/2022/03/25/what-is-a-transformer-model/#:~:text=A%20transformer%20model%20is%20a,25%2C%202022%20by%20Rick%20Merritt). March 25, 2022 by Rick Merritt
+* [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) by 
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin. 12 Jun 2017
 * Seminario sobre inteligencia artificial y docencia universitaria de la ULL
   
   <youtube id="Os2fNi5LXZQ"></youtube>
