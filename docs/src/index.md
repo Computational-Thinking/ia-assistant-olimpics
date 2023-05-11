@@ -9,7 +9,25 @@ Universidad de La Laguna
 
 ## Introducción
 
-Los modelos de IA generativa funcionan mediante el uso de redes neuronales para identificar patrones a partir de grandes conjuntos de datos para luego generar datos y/o contenidos. Los Large language models (LLM) son un tipo de modelo de IA generativa  que procesa y genera texto en lenguaje natural. Esto  ha sido posible en parte por la disponibilidad de grandes cantidades de datos de texto, como libros, sitios web, publicaciones y código en redes sociales. Estos datos se pueden utilizar para entrenar los modelos de manera que sean capaces de predecir y generar respuestas de lenguaje natural en una variedad de contextos. Como resultado, los grandes modelos de lenguaje tienen múltiples aplicaciones prácticas, como asistentes virtuales, chatbots o generadores de texto, como ChatGPT.
+Los modelos de IA generativa funcionan mediante el uso de redes neuronales para identificar patrones a partir de grandes conjuntos de datos para luego generar  contenidos. Los *Large Language Models* (LLM) son un tipo de modelo de IA generativa  que procesa y genera texto en lenguaje natural. 
+
+Su aparición ha sido posible en parte por la **disponibilidad de grandes cantidades de textos**, como libros, sitios web, publicaciones y códigos en plataformas de desarrollo colaborativo y redes sociales. Estos textos se pueden utilizar para entrenar los modelos de manera que sean capaces de predecir y generar respuestas de lenguaje natural en una variedad de contextos. Entre las  múltiples aplicaciones prácticas que tienen los generadores de texto, como ChatGPT se encuentra la de generar código. 
+
+Otro avance que ha hecho posible los LLM es la aparición de las **redes adversarias generativas (GAN)** que pueden ser  utilizadas para la generación de texto, mediante el entrenamiento de dos redes neuronales, una que genera textos *"falsos"* (Generador) y otra que discrimina entre textos *"reales"* (generados por humanos) y falsos (Discriminador). Las dos redes se entrenan en competencia con el objetivo de mejorar la capacidad del generador para generar textos realistas.
+
+Otro componente de los LLM es que son **modelos basados en transformadores** descritos por primera vez en un artículo de Google de 2017: la red neuronal aprende el contexto y el significado mediante el seguimiento de las relaciones entre las palabras en la oración. Al encontrar patrones entre elementos matemáticamente, se elimina la necesidad de etiquetar los datos, haciendo posible procesar en paralelo los petabytes de datos de texto que existen en la web. 
+
+Los modelos de transformador aplican un conjunto evolutivo de técnicas matemáticas, llamadas *atención* o *autoatención*, para detectar patrones incluso entre elementos de datos distantes en una serie, que se influyen y dependen unos de otros.
+
+Los transformadores usan codificadores posicionales para etiquetar elementos de datos que entran y salen de la red. 
+
+![](/images/Transformer-model-example-aidan-gomez-1280x763.png)
+
+Las *unidades de atención* siguen estas etiquetas, calculando una especie de mapa algebraico de cómo cada elemento se relaciona con los demás.
+
+Las consultas de atención generalmente se ejecutan en paralelo mediante el cálculo de una matriz de ecuaciones en lo que se denomina atención de múltiples cabezas.
+
+GitHub Copilot es una aplicación que se integra en la IDE de desarrollo y que utiliza IA generativa para proporcionar sugerencias de código en una gran variedad de lenguajes de programación, incluidos Python, JavaScript, TypeScript, Ruby, Go, Rust, PHP y C#.
 
 Desde que GitHub introdujo GitHub Copilot en Junio de 2021 y en los cursos 21/22 y 22/23 hemos estado usando no sólo GH Copilot sino también Chat-GPT-3 y Chat-GPT-4 en nuestra docencia, en la elaboración y preparación de clases, ejercicios y prácticas e investigando como los alumnos pueden beneficiarse de los mismos. 
 
@@ -414,6 +432,7 @@ A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, de
 * James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. 2022. [The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming](https://dl.acm.org/doi/10.1145/3511861.3511863#sec-comments). In Proceedings of the 24th Australasian Computing Education Conference (ACE '22). Association for Computing Machinery, New York, NY, USA, 10–19. <https://doi.org/10.1145/3511861.3511863>
 * [Copilot, ChatGPT y GPT-4 han cambiado el mundo de la programación para siempre. Esto opinan los programadores](https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos). Javier Pastor. 28 Marzo 20223. Entrevista con Brais Moore y Miguel Angel Durán. Xataca.com
 * [Harness the power of generative AI for software development](https://github.com/readme/guides/coding-generative-ai) by Anton Mirhorodchenko
+* [What Is a Transformer Model?](https://blogs.nvidia.com/blog/2022/03/25/what-is-a-transformer-model/#:~:text=A%20transformer%20model%20is%20a,25%2C%202022%20by%20Rick%20Merritt). March 25, 2022 by Rick Merritt
 * Seminario sobre inteligencia artificial y docencia universitaria de la ULL
   
   <youtube id="Os2fNi5LXZQ"></youtube>
