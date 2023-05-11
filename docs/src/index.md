@@ -398,11 +398,11 @@ En ambos casos la propuesta contiene errores que pueden ser resueltos por un hum
  
 Use ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como dividir problemas en tareas más pequeñas, estimar la complejidad y generar plantillas de código. Luego use Copilot para generar código basado en dichas plantillas.
 
-A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, debe pensar en la IA como un miembro del equipo, y siempre hay que revisar cuidadosamente los resultados generados por la IA. 
+A día de hoy, la IA no reemplaza al especialista. En su lugar, debe pensar en la IA como una herramienta o un miembro del equipo/equipamiento, y tener en cuenta que siempre hay que revisar cuidadosamente los resultados generados por la IA. 
 
 ![/images/ai-will-take-my-job.webp](/images/ai-will-take-my-job.webp)
 
-La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un especialista que comprenda tanto el problema como las capacidades de la IA.
+La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un humano que comprenda tanto el problema como las capacidades de la IA.
 
 ## Referencias
 
