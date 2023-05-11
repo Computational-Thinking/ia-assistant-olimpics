@@ -400,7 +400,11 @@ Use ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como di
 
 Para acelerar las respuestas es conveniente que al comienzo de la conversación instruyamos al LLM para que proporcione respuestas en inglés, independientemente del idioma (o idiomas) que usemos en nuestras indicaciones. 
 
-A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, debe pensar en la IA como un miembro del equipo, y siempre hay que revisar cuidadosamente los resultados generados por la IA. La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un especialista que comprenda tanto el problema como las capacidades de la IA.
+A día de hoy, la IA no reemplaza completamente al especialista. En su lugar, debe pensar en la IA como un miembro del equipo, y siempre hay que revisar cuidadosamente los resultados generados por la IA. 
+
+![/images/ai-will-take-my-job.webp](/images/ai-will-take-my-job.webp)
+
+La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un especialista que comprenda tanto el problema como las capacidades de la IA.
 
 ## Referencias
 
