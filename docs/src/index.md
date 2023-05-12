@@ -432,6 +432,9 @@ La IA puede darnos una aproximación a la solución de forma rápida, pero requi
   - [42:40](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=2560s) – GPT4 cannot do true planning 
   - [45:02](https://www.youtube.com/watch?v=qbIk7-JPB2c&t=2702s) – Is GPT4 intelligent and does it matter?
 * [Sam Altman: OpenAI CEO on GPT-4, ChatGPT, and the Future of AI](https://youtu.be/L_Guz73e6fw) Lex Fridman Podcast #367
+* [Introduction to Large Language Models](https://youtu.be/zizonToFXDs) by Google Cloud Tech. Youtube. 
+* [Introduction to Generative AI](https://youtu.be/G2fqAlgmoPo) by Google Cloud Tech. Youtube. 
+
 * [GitHub Copilot AI pair programmer: Asset or Liability?](https://arxiv.org/pdf/2206.15331.pdf) Arghavan Moradi Dakhel, Vahid Majdinasab, Amin Nikanjam, Foutse Khomh, Michel C. Desmarais, Zhen Ming (Jack)Jiang Jun 2022
 * James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. 2022. [The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming](https://dl.acm.org/doi/10.1145/3511861.3511863#sec-comments). In Proceedings of the 24th Australasian Computing Education Conference (ACE '22). Association for Computing Machinery, New York, NY, USA, 10–19. <https://doi.org/10.1145/3511861.3511863>
 * [Copilot, ChatGPT y GPT-4 han cambiado el mundo de la programación para siempre. Esto opinan los programadores](https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos). Javier Pastor. 28 Marzo 20223. Entrevista con Brais Moore y Miguel Angel Durán. Xataca.com
