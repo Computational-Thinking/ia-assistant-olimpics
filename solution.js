@@ -56,7 +56,7 @@ el número mínimo de hospitales es "2"
 
 // Se lee la entrada y se guarda en un array de puentes
 var fs = require('fs');
-var fileName = process.argv[2];
+var fileName = process.argv[2] || 'input.txt';
 var input = fs.readFileSync(fileName).toString().split('\n');
 var n = parseInt(input[0].split(' ')[0]);
 var p = parseInt(input[0].split(' ')[1]);
