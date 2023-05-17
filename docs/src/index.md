@@ -142,12 +142,14 @@ En este [repositorio][Repositorio] existen las siguientes ramas que se correspon
 
 ```
 ➜  docs git:(main) ✗ git -P branch
-  chat-gpt-3
+➜  ia-assistant-olimpics git:(main) git -P branch 
++ chat-gpt-3
   chat-gpt-4
-+ chat-gpt-4-allocation-problem
-  chat-gpt-4-human
+  chat-gpt-4-allocation-problem
++ chat-gpt-4-human
   chat-gpt3-human
   chat-gpt3-human-sortedbynumedges
+  copilot-x
 * main
 ```
 
@@ -162,8 +164,7 @@ Esta capacidad da lugar a que ocurran anécdotas como en esta clase de Procesado
 
 Sin embargo GitHub Copilot no fue capaz de entender la formulación del [problema P31958_es][P31958_es] ni de hacer ningún progreso. Cuando se le formula entra en un bucle enloquecido en el que repite los mismo comentarios una y otra vez.
 
-
-No hemos podido probar la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4.
+La experiencia con la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4 se recoge en la rama `copilot-x` en el fichero `solution.js`. No encuentra una solución correcta.
 
 
 ### Chat-GPT-3
