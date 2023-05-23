@@ -1,0 +1,12 @@
+{
+  "name": "copilot-x",
+  "version": "1.0.0",
+  "description": "Leaarning copilot-x",
+  "main": "solution.mjs",
+  "scripts": {
+    "test": "node solution.mjs"
+  },
+  "keywords": ["copilot"],
+  "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+  "license": "ISC"
+}
