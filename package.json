@@ -7,6 +7,9 @@
     "test": "node solution.mjs"
   },
   "keywords": ["copilot"],
+  "dependencies": {
+    "array-shuffle": "^3.0.0"
+  }
   "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
   "license": "ISC"
 }
