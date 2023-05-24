@@ -102,6 +102,10 @@ Write a JavaScript function `findDistances(graph)` that takes as input a graph d
 ]
 ```
 
+## Question distanceToSubset(node, R)
+
+Write a function `distanceToSubset(node, R)` that computes the distance of `node` to the subset of nodes `R`
+
 ## Question 
 
 How can I write a JavaScript function that gives the solution to this problem: "Given a undirected graph G = (V,E), find the smallest subset R of V such that the distance of any node to the subset R is not greater than one?"
