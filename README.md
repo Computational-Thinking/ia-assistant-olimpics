@@ -24,7 +24,7 @@ Write a JavaScript function readProblem(fileName) that reads a file containing a
 
 ## Question findDistances
 
-Write a JavaScript function `findDistances(graph)` that takes as input a graph description as returned by the `readProblem` function returns the matrix with the distances between each pair of nodes. The distance of a node to a node that is not reachable from the given node is `Infinity`. For example, for the graph above, the function should return the following array for node 0:
+Write a JavaScript function `findDistances(graph)` that takes as input a graph description as returned by the `readProblem` function and returns the matrix with the distances between each pair of nodes. The distance of a node to a node that is not reachable from the given node is `Infinity`. For example, for the graph above, the function should return the following array for node 0:
 
 
 ```js
@@ -104,8 +104,42 @@ Write a JavaScript function `findDistances(graph)` that takes as input a graph d
 
 ## Question distanceToSubset(node, R)
 
-Write a function `distanceToSubset(node, R)` that computes the distance of `node` to the subset of nodes `R`
+Given the `graph` as returned by the `readProblem` function write a  function `distanceToSubset(node, R)` that computes the distance of `node` to the subset of nodes `R`
 
-## Question 
+## Question randomNode(number)
 
-How can I write a JavaScript function that gives the solution to this problem: "Given a undirected graph G = (V,E), find the smallest subset R of V such that the distance of any node to the subset R is not greater than one?"
+Write a function `randomNode(number)` that returns an integer random number between `0` and `number-1`
+
+
+## Question allocateResources(order) Heuristic 1
+
+Write a heuristic function `allocateResources(order)` that takes 
+as input `order` a permutation of the nodes of the `graph`. 
+The function returns a minimum size subset `R` of nodes such that the 
+distance of any node to the subset `R` is not greater than one. 
+Traverse the nodes in the order given by the `order` array. 
+
+For example, for the graph above, the function should return a set with the elements in the following array:
+
+```js
+[0, 2, 4, 6, 8]
+```
+
+the function can be called this way:
+
+```js
+import arrayShuffle from 'array-shuffle';
+let order = arrayShuffle(Array.from({ length: graph.length }, (_, i) => i))
+console.log(allocateResources(order)) // Set(5) { 0, 2, 4, 6, 8 }
+```
+
+## Question explore(graph) Heuristic 2
+
+Write a function `explore(graph, t)` that takes as input a graph description as returned by the `readProblem` function and  
+
+1. Initializes `bestSize`to `Infinity` and `bestSet` to `[]`.
+2. repeats `t` times these steps:
+  1. Shuffles the `graph` (use the `arrayShuffle` functionthat shuffles an array and is exported by the module `array-shuffle`) and 
+  2. Uses the `allocateResources(graph)` above to find a subset candidate `R`.
+  3. If the new set `R` has smaller size than the best set found so far, the `bestSet` is updated.
+3. The function should return the `bestSet` found.
