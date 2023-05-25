@@ -405,10 +405,37 @@ En la rama `main` se documenta la experiencia.
 
 ## Conclusiones
 
-GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GPT-3 como 4 son capaces de encontrar un patrón/isomorfismo del problema del concurso con el problema de coloración y hacer una propuesta de código. 
-En ambos casos la propuesta contiene errores que pueden ser resueltos por un humano sin mucho esfuerzo. GPT-4 explica mejor la propuesta y ofrece referencias a fuentes de consulta.
+El nivel de estas herramientas es tal que es previsible que en el futuro la labor de programar se parezca mas a una 
+"Ingeniería del Interrogatorio" cuyo objetivo es guiar a la IA para que ecuentre la solución al problema.
+
+En esta aproximación "el programa" es el guión de preguntas. En el caso de Copilot podemos usar markdown para la comunicación. 
+Por ahora, es mejor usar el idioma Inglés por cuanto los LLM suelen ser más eficientes cuando la comunicación ocurre en este idioma.
+Es conveniente que las preguntas sobre las funciones solicitadas incluyan ejemplos de llamadas especificando los parámetros de entrada y el valor de retorno. Cuanto más contexto se proporcione, mejores serán los resultados.
+
+En nuestras primeras interacciones con la IA solíamos analizar su respuesta y modificarla para que fuera correcta.
+Con el tiempo nos hemos dado cuenta que esta metodología no es siempre la más eficiente.
+**En ocasiones es mejor reformular el problema para que la IA encuentre una solución correcta. De manera que el proceso de refinamiento-depuración (debugging) no se hace sobre el código sino sobre el guión de preguntas**.
+
+Esto supone que en nuestra labor como profesores de programación las tareas y ejercicios que marquemos a nuestros alumnos
+no deben estar tanto centradas en pedir a los alumnos la solución como en demandarles 
+los guiones de preguntas que permiten con alta probabilidad que la IA encuentre la solución.
+
+Un posible flujo de trabajo usando control de versiones podría ser:
+1. Un fichero con el guión de preguntas formuladas a la IA (rama preguntas)
+2. Un segundo fichero con las preguntas y respuestas seleccionadas del LLM (rama respuestas)
+Tercero preguntas-respuestas, comentarios críticos a las respuestas y modificaciones introducidas por el humano (rama human)
+
+Es necesario 
+definir formatos de trabajo y 
+desarrollar herramientas que ayuden a automatizar el ciclo
+
+
+La versión primera de GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GitHub Copilot-X como GPT-3 y 4 son capaces de encontrar soluciones. Por ejemplo ambos GPT-3 y 4 proponen un patrón/isomorfismo del problema del concurso con el problema de coloración y hacen una propuesta de código. 
+En todos los casos las propuestas iniciales contienen errores que pueden ser resueltos por un humano. La mayor parte del esfuerzo va en entender la solución parcial proveída mas que en la modificación. GPT-4 explica con mas detalle que GPT-3 sus propuestas y ofrece referencias a fuentes de consulta.
  
-Use ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como dividir problemas en tareas más pequeñas, estimar la complejidad y generar plantillas de código. Luego use Copilot para generar código basado en dichas plantillas.
+Es una buena estrategia combinar ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como dividir problemas en tareas más pequeñas, estimar la complejidad y generar plantillas de código. Luego se puede usar Copilot para generar código basado en dichas plantillas.
+
+
 
 A día de hoy, la IA no reemplaza al especialista. En su lugar, debe pensar en la IA como una herramienta o un miembro del equipo/equipamiento, y tener en cuenta que siempre hay que revisar cuidadosamente los resultados generados por la IA. 
 
