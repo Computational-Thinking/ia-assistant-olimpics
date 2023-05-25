@@ -164,7 +164,7 @@ Esta capacidad da lugar a que ocurran anécdotas como en esta clase de Procesado
 
 Sin embargo GitHub Copilot no fue capaz de entender la formulación del [problema P31958_es][P31958_es] ni de hacer ningún progreso. Cuando se le formula entra en un bucle enloquecido en el que repite los mismo comentarios una y otra vez.
 
-La experiencia con la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4 se recoge en la rama `copilot-x`. El fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/README.md) contiene el conjunto de preguntas formuladas a GitHub Copilot-X. Si quieres reproducir la experiencia descarga el repositorio, sitúate en esta rama y procede a formularle a Copilot-X las preguntas en 
+La experiencia con la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4 se recoge en las ramas `copilot-x` y `copilot-x-questions`. El fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/README.md) contiene el conjunto de preguntas formuladas a GitHub Copilot-X. Si quieres reproducir la experiencia descarga el repositorio, sitúate en esta rama,  edita con VSCode el fichero [solution.mjs](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/solution.mjs) y procede a formularle a Copilot-X las preguntas en 
 el fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/README.md).
 
 ### Chat-GPT-3
