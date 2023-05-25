@@ -135,11 +135,11 @@ console.log(allocateResources(order)) // Set(5) { 0, 2, 4, 6, 8 }
 
 ## Question explore(graph) Heuristic 2
 
-Write a function `explore(graph, t)` that takes as input a graph description as returned by the `readProblem` function and  
+Write a function `explore(t)` that receives as input `t` a number of times. It uses the graph description as returned by the `readProblem` function and  
 
 1. Initializes `bestSize`to `Infinity` and `bestSet` to `[]`.
 2. repeats `t` times these steps:
-  1. Shuffles the `graph` (use the `arrayShuffle` functionthat shuffles an array and is exported by the module `array-shuffle`) and 
-  2. Uses the `allocateResources(graph)` above to find a subset candidate `R`.
+  1. Shuffles the `graph` (use the `arrayShuffle` function that shuffles an array and is exported by the module `array-shuffle`) and 
+  2. Uses the `allocateResources(order)` above to find a subset candidate `R`.
   3. If the new set `R` has smaller size than the best set found so far, the `bestSet` is updated.
 3. The function should return the `bestSet` found.
