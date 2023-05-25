@@ -164,7 +164,9 @@ Esta capacidad da lugar a que ocurran anécdotas como en esta clase de Procesado
 
 Sin embargo GitHub Copilot no fue capaz de entender la formulación del [problema P31958_es][P31958_es] ni de hacer ningún progreso. Cuando se le formula entra en un bucle enloquecido en el que repite los mismo comentarios una y otra vez.
 
-La experiencia con la nueva versión experimental de [GitHub Copilot-X](https://github.com/features/preview/copilot-x) basada en Chat-gpt-4 se recoge en las ramas [copilot-x](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/copilot-x) y [copilot-x-questions](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/copilot-x-questions). El fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x-questions/README.md)  e la rama `copilot-x-questions` contiene el conjunto de preguntas formuladas a GitHub Copilot-X. Si quieres reproducir la experiencia 
+### GitHub Copilot-X
+
+La experiencia con la nueva versión experimental de [GitHub Copilot-X](https://github.com/features/preview/copilot-x) basada en Chat-gpt-4 se recoge en las ramas [copilot-x](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/copilot-x) y [copilot-x-questions](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/copilot-x-questions). El fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x-questions/README.md)  en la rama `copilot-x-questions` contiene el conjunto de preguntas formuladas a GitHub Copilot-X. Si quieres reproducir la experiencia 
 
 1. Descarga el [repositorio](https://github.com/Computational-Thinking/ia-assistant-olimpics), 
 2. Descargue e instale el código de [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/)
@@ -177,6 +179,8 @@ La experiencia con la nueva versión experimental de [GitHub Copilot-X](https://
 4. Sitúate en la  rama `copilot-x-questions`,  
 4. Edita con VSCode el fichero vacío [solution.mjs](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/solution.mjs) y 
 5. Procede a formularle a Copilot-X las preguntas en el fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/README.md).
+
+GitHub Copilot-X es capaz de responder a las preguntas de la rama [copilot-x-questions](https://github.com/Computational-Thinking/ia-assistant-olimpics/tree/copilot-x-questions) y generar una solución correcta a partir de ellas.
 
 ### Chat-GPT-3
 
@@ -438,7 +442,7 @@ A día de hoy, la IA no reemplaza al especialista. En su lugar, debe pensar en l
 
 ![/images/ai-will-take-my-job.webp](images/ai-will-take-my-job.webp)
 
-La IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un humano que comprenda tanto el problema como las capacidades de la IA.
+Por ahora (2023) la IA puede darnos una aproximación a la solución de forma rápida, pero requiere de la dirección y orientación de un humano que comprenda tanto el problema como las capacidades de la IA.
 
 ## Referencias
 
