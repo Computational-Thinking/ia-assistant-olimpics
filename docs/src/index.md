@@ -414,28 +414,25 @@ Es conveniente que las preguntas sobre las funciones solicitadas incluyan ejempl
 
 En nuestras primeras interacciones con la IA solíamos analizar su respuesta y modificarla para que fuera correcta.
 Con el tiempo nos hemos dado cuenta que esta metodología no es siempre la más eficiente.
-**En ocasiones es mejor reformular el problema para que la IA encuentre una solución correcta. De manera que el proceso de refinamiento-depuración (debugging) no se hace sobre el código sino sobre el guión de preguntas**.
+**En ocasiones es mejor reformular el problema para que la IA genere con alta probabilidad una solución correcta. De manera que el proceso de refinamiento-depuración (debugging) no se hace tanto sobre el código inicialmente IA-generado sino sobre el guión de preguntas**.
 
 Esto supone que en nuestra labor como profesores de programación las tareas y ejercicios que marquemos a nuestros alumnos
 no deben estar tanto centradas en pedir a los alumnos la solución como en demandarles 
 los guiones de preguntas que permiten con alta probabilidad que la IA encuentre la solución.
 
 Un posible flujo de trabajo usando control de versiones podría ser:
-1. Un fichero con el guión de preguntas formuladas a la IA (rama preguntas)
-2. Un segundo fichero con las preguntas y respuestas seleccionadas del LLM (rama respuestas)
-Tercero preguntas-respuestas, comentarios críticos a las respuestas y modificaciones introducidas por el humano (rama human)
+1. Un fichero con el guión de preguntas para formular a la IA (rama preguntas)
+2. Un segundo fichero con las preguntas y varias respuestas seleccionadas del LLM (rama respuestas). Hacer un análisis de variabilidad de la respuesta.
+3. Tercero preguntas-respuestas, comentarios críticos del alumno sobre la variabilidad y el sesgo de las respuestas
+4. Modificaciones introducidas por el alumno (rama human)
 
-Es necesario 
-definir formatos de trabajo y 
-desarrollar herramientas que ayuden a automatizar el ciclo
-
+En el futuro creeemos que será  necesario definir flujos y formatos de trabajoasí como  
+desarrollar herramientas que ayuden a mejorar la eficiencia del proceso de interrogación ala IA.
 
 La versión primera de GitHub Copilot no es capaz del nivel de abstracción necesaria para plantear una solución al problema desde su formulación. Tanto GitHub Copilot-X como GPT-3 y 4 son capaces de encontrar soluciones. Por ejemplo ambos GPT-3 y 4 proponen un patrón/isomorfismo del problema del concurso con el problema de coloración y hacen una propuesta de código. 
 En todos los casos las propuestas iniciales contienen errores que pueden ser resueltos por un humano. La mayor parte del esfuerzo va en entender la solución parcial proveída mas que en la modificación. GPT-4 explica con mas detalle que GPT-3 sus propuestas y ofrece referencias a fuentes de consulta.
  
 Es una buena estrategia combinar ChatGPT junto con GitHub Copilot. ChatGPT para tareas de alto nivel, como dividir problemas en tareas más pequeñas, estimar la complejidad y generar plantillas de código. Luego se puede usar Copilot para generar código basado en dichas plantillas.
-
-
 
 A día de hoy, la IA no reemplaza al especialista. En su lugar, debe pensar en la IA como una herramienta o un miembro del equipo/equipamiento, y tener en cuenta que siempre hay que revisar cuidadosamente los resultados generados por la IA. 
 
