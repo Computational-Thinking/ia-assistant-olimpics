@@ -164,7 +164,7 @@ Esta capacidad da lugar a que ocurran anécdotas como en esta clase de Procesado
 
 Sin embargo GitHub Copilot no fue capaz de entender la formulación del [problema P31958_es][P31958_es] ni de hacer ningún progreso. Cuando se le formula entra en un bucle enloquecido en el que repite los mismo comentarios una y otra vez.
 
-La experiencia con la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4 se recoge en la rama `copilot-x` en el fichero `solution.js`. No encuentra una solución correcta.
+La experiencia con la nueva versión experimental de GitHub Copilot-X basada en Chat-gpt-4 se recoge en la rama `copilot-x`. El fichero [README.md](https://github.com/Computational-Thinking/ia-assistant-olimpics/blob/copilot-x/README.md) contiene el conjunto de preguntas formuladas a GitHub Copilot-X.
 
 
 ### Chat-GPT-3
@@ -448,7 +448,7 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 
   30 de Marzo 2023
 * [Prompt engineering for students – making generative AI work for you](https://educational-innovation.sydney.edu.au/teaching@sydney/prompt-engineering-for-students-making-generative-ai-work-for-you/). Danny Liu. 28 April. 2023
-
+* [](https://docs.github.com/en/early-access/copilot/github-copilot-chat-transparency-note)
 
 [Pastor]: https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos
 [Repositorio]: https://github.com/Computational-Thinking/ia-assistant-olimpics
