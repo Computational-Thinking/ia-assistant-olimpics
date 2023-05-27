@@ -1,9 +1,14 @@
+## Question import fs
+
+import fs
+
 ## Question readProblem
 
 Write a JavaScript function readProblem(fileName) that reads a file containing an undirected graph description with the following format:
 
 1. The first line contains the number of nodes and the number of edges in the graph, separated by a space.
-2. The following lines contain the edges of the graph, one edge per line, with the two nodes of the edge separated by a space. Here is an example of a graph description file:
+2. The following lines contain the edges of the graph, one edge per line, 
+with the two nodes of the edge separated by a space. Here is an example of a graph description file:
 
   ```
   10 6
@@ -14,7 +19,9 @@ Write a JavaScript function readProblem(fileName) that reads a file containing a
   7 8
   8 9
   ```
-3. The function should return an array indexed on the  nodes of the graph, where each element of the array is a set containing the nodes adjacent to the node corresponding to the index. For example, for the graph above, the function should return the following array:
+3. The function should return an array indexed on the  nodes of the graph, 
+where each element of the array is a set containing the nodes adjacent to the node corresponding to the index. 
+For example, for the graph above, the function should return the following array:
 
   ```js
   [[1], [0], [], [4], [3, 5], [4], [7], [6, 8], [7, 9], [8]]
