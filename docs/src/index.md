@@ -33,15 +33,19 @@ Desde que GitHub introdujo GitHub Copilot en Junio de 2021 y en los cursos 21/22
 
 ## Objetivos
 
-Nuestro objetivo es evaluar y comparar las capacidades de los diferentes asistentes IA para proveer soluciones a problemas como los que se plantean en la enseñanza de la programación.
+Nuestro objetivo en este trabajo es resumir esa experiencia de estos dos cursos 
+mostrando con un ejemplo tomado de las Olimpiadas de Informática Españolas 
+varias formas de interacción con GitHub Copilot, GitHub Copilot X, Chat GPT 3 y Chat GPT 4. 
+También reflexionaremos sobre cómo su aparición afecta al concepto mismo de programación y en consecuencia proponemos algunas ideas 
+para la elaboración del material de clase, la preparación de tareas y la evaluación.
+
 
 El material de este trabajo se aloja en el [repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics) de GitHub. En la rama `main` del mismo se encuentran los fuentes de este [artículo](https://computational-thinking.github.io/ia-assistant-olimpics/) contienendo el material, informe y conclusiones de un experimento-investigación que nos planteamos los autores sobre el uso de los asistentes IA en la enseñanza de la programación.
 
 
 ### Asistentes IA utilizados
 
-Decidimos usar todos los asistentes IA a nuestro alcance: Chat-GPT 3 y 4 y GitHub Copilot.
-Nos hubiera gustado probar GitHub Copilot X pero en el momento de hacer el estudio no tenemos acceso al mismo.
+Decidimos usar todos los asistentes IA a nuestro alcance: Chat-GPT 3 y 4, GitHub Copilot y GitHub Copilot X.
 
 ### Problema
 
