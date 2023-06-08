@@ -491,7 +491,16 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 
   30 de Marzo 2023
 * [Prompt engineering for students – making generative AI work for you](https://educational-innovation.sydney.edu.au/teaching@sydney/prompt-engineering-for-students-making-generative-ai-work-for-you/). Danny Liu. 28 April. 2023
-* [](https://docs.github.com/en/early-access/copilot/github-copilot-chat-transparency-note)
+* [GitHub Copilot Chat Transparency Note](https://docs.github.com/en/early-access/copilot/github-copilot-chat-transparency-note)
+by GitHub
+* SudoLang: A Powerful Pseudocode Programming Language for LLMs.
+<https://medium.com/javascript-scene/sudolang-a-powerful-pseudocode-programming-language-for-llms-d64d42aa719b>
+* Jargon: an LLM-based pseudolanguage for prompt engineering:
+<https://jake.mirror.xyz/sPZECVTkrbVq4DerB13Thvqq_XqsDGwTBDD3SSzdI44>
+* Large Language Model Programs. Imanol Schlag, Sainbayar Sukhbaatar, Asli Celikyilmaz, Wen-tau Yih, Jason Weston, Jürgen Schmidhuber, Xian Li
+<https://arxiv.org/abs/2305.05364> and <https://arxiv.org/pdf/2305.05364>
+* Meet LMQL: An Open Source Programming Language and Platform for Large Language Model (LLM) Interaction
+<https://www.marktechpost.com/2023/04/11/meet-lmql-an-open-source-programming-language-and-platform-for-large-language-model-llm-interaction/>
 
 [Pastor]: https://www.xataka.com/servicios/copilot-chatgpt-gpt-4-han-cambiado-para-siempre-mundo-programacion-esto-que-opinan-expertos
 [Repositorio]: https://github.com/Computational-Thinking/ia-assistant-olimpics
