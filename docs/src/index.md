@@ -411,14 +411,150 @@ La rama `chat-gpt-4-allocation-problem` contiene la solución propuesta por chat
 
 En la rama `main` se documenta la experiencia.
 
+## Exercises for Students
+
+* Ejercicios de escribir tests  para un prompt/pregunta
+
+## Meta conversaciones
+
+### Metaconversation
+
+La conversación con una IA es conveniente que la dividamos en dos partes: 
+
+1. la *metaconversación* y
+2. la *conversación* 
+
+La **metaconversación** es la interacción con la IA para definir las reglas por las que se regirá la *conversación*.
+
+### Example: You are my Spanish teacher
+
+**metaconversacion**
+
+You are my Spanish teacher. Your job is to teach me Spanish by adhering to the following rules:
+
+1. By default, you ask me questions in Spanish, which I will answer in Spanish. Continue asking me questions. If I say, "keep going" or "continue", in Spanish or English, then proceed to restart asking me questions.
+
+2. If you see that my answer contains a grammatical error, you must immediately correct me. When you correct me, please say, "CORRECTION: [corrected version of what I said in Spanish]". Then follow this by saying, "EXPLANATION: [explanation of why my version was incorrect]". 
+
+3. Sometimes I will not know how to say a certain phrase or word in Spanish. In this case, I will use curly braces (i.e. {}) to same the phrase in English instead. When you see me doing this, immediately provide assistance by translating the curly braces into English for me by saying, "TRANSLATION: [my phrase in English] => [your translation of the phrase in Spanish]". Then continue asking me questions. 
+
+4. As questions progress, they should become more complex and intricate. You should also make the topics of your questions diverse and interesting and they should cover philosophy, politics, science, and art.
+
+Please start by asking me your first question.
+
+**metaconversacion**
+
+Véase *Jargon: an LLM-based pseudolanguage for prompt engineering*: 
+<https://jake.mirror.xyz/sPZECVTkrbVq4DerB13Thvqq_XqsDGwTBDD3SSzdI44>
+
+### Ejemplo: Adivina un número
+
+**metaconversacion**
+
+```
+- Write a number between 0 and 9
+- Ask me if that number is correct
+- repeat the two former steps until I say "yes" or "quit"
+```
+
+::: tip compilar-interpretar
+La meta-conversación es equivalente en lenguajes de programación convencionales a "compilar el programa" mientras que la conversación es equivalente a "ejecutar/interpretar el programa".
+:::
+
+Si consideramos la meta-conversación como un programa, tiene algunas propiedades interesantes:
+
+Las instrucciones están escritas en lenguaje natural y se ejecutan secuencialmente.
+
+El lenguaje aunque difuso, 
+
+1. usa palabras como `me` para referirse implícitamente al usuario. 
+2. El programa no define ninguna variable explícitamente aunque hay una mención implícita a `number` y se indica su tipo (`between 0 and 9`).  
+3. Se describe el bucle de la conversación y cuando debe detenerse.
+
+Esto es suficiente para que el intérprete LLM comprenda lo que el *ingeniero socrático*  quiere que haga:
+
+**conversacion**
+
+```
+ChatGPT: Sure! Let's start with your instructions.
+I'll write a number between 0 and 9.
+I'll ask you if that number is correct.
+If you don't respond with "yes" or "quit," I'll repeat the process from steps 1 and 2.
+Here's the first number: 3. Is this the number you were thinking of?
+User: No
+ChatGPT: Alright! Let's try again.
+Here's another number: 7. Is this the number you were thinking of?
+User: yes
+ChatGPT: Great! I'm glad I guessed the number correctly. If you would like to play again or have any other instructions, please let me know!
+```
+
+### Ejemplo: Sorted numbers
+
+Here is another example of a metaconversation:
+
+**metaconversation: sorted numbers**
+```
+- Ask me a list of numbers
+- If the list is sorted, output "Sorted!"
+- If not, output the sorted list
+- repeat the two former steps until I say "quit"
+```
+
+and here is the execution:
+
+**conversation: sorted numbers**
+
+```
+ChatGPT: Certainly! Let's proceed with your instructions.
+Please provide me with a list of numbers, separated by commas.
+I will check if the list is sorted.
+If the list is sorted, I will output "Sorted!"
+If the list is not sorted, I will output the sorted list.
+We will repeat steps 1 to 4 until you say "quit."
+Please enter the list of numbers, or type "quit" to end the process:
+
+User: 1,4,99
+ChatGPT: Thank you for the list of numbers. After sorting the list, we get: 1, 4, 99.
+Since the list is not sorted, the output is the sorted list: 1, 4, 99.
+Please enter the list of numbers, or type "quit" to end the process:
+User: 1, 4, 99
+ChatGPT: Thank you for the list of numbers. After sorting the list, we get: 1, 4, 99.
+The list is already sorted, so the output is "Sorted!"
+
+Please enter the list of numbers, or type "quit" to end the process:
+User: quit
+ChatGPT: Alright! The process has ended. If you have any more instructions or need assistance with anything else, feel free to let me know.
+```
+
+Nótese como la respuesta a la lista sin blancos primera `1,4,99` produce una respuesta diferente a la segunda `1, 4, 99`.
+
+### Ejemplo: Trainer
+
+**metaconversacion**
+
+[![chatgpt-trainer.png](/images/chatgpt-trainer.png)](https://twitter.com/ElCopyMaster/status/1669749063024095245?s=20)
+
+follow the link to see the **conversation**
+
+### SudoLang
+
+[SudoLang](https://medium.com/javascript-scene/sudolang-a-powerful-pseudocode-programming-language-for-llms-d64d42aa719b) is a Pseudocode Programming Language for LLMs. Is available on [GitHub](https://github.com/paralleldrive/sudolang-llm-support/blob/main/sudolang.sudo.md). All you have to do is paste it into ChatGPT with GPT-4+ running (it does kinda work in GPT-3.5, but not as well), and you’ll be off to the races.
+
+1. Copy and paste the [SudoLang specification](https://github.com/paralleldrive/sudolang-llm-support/blob/main/sudolang.sudo.md) into the ChatGPT (GPT-4) prompt.
+2. Copy and paste the [teach program](https://github.com/paralleldrive/sudolang-llm-support/blob/main/examples/teach.sudo) into the ChatGPT SudoLang prompt.
+3. Type `teach(SudoLang)` in the prompt, hit enter
+4. Check out the [examples](https://github.com/paralleldrive/sudolang-llm-support/tree/main/examples), and learn how to Unit test SudoLang programs with Riteway.
+
 ## Conclusiones
 
 El nivel de estas herramientas es tal que es previsible que en el futuro la labor de programar se parezca mas a una 
-"Ingeniería del Interrogatorio" cuyo objetivo es guiar a la IA para que ecuentre la solución al problema.
+"Ingeniería del Interrogatorio" cuyo objetivo es guiar a la IA para que encuentre la solución al problema.
 
 En esta aproximación "el programa" es el guión de preguntas. En el caso de Copilot podemos usar markdown para la comunicación. 
 Por ahora, es mejor usar el idioma Inglés por cuanto los LLM suelen ser más eficientes cuando la comunicación ocurre en este idioma.
 Es conveniente que las preguntas sobre las funciones solicitadas incluyan ejemplos de llamadas especificando los parámetros de entrada y el valor de retorno. Cuanto más contexto se proporcione, mejores serán los resultados.
+
+Es conveniente ****establecer una meta-conversación antes de la conversación en la que se fijan de forma precisa las reglas por las que se regirá la conversación**. Estas meta-conversaciones pueden ser muy complejas pero en muchos casos el esfuerzo de programarlas compensa ya que, en general, suelen ser muy reciclables.
 
 En nuestras primeras interacciones con la IA solíamos analizar su respuesta y modificarla para que fuera correcta.
 Con el tiempo nos hemos dado cuenta que esta metodología no es siempre la más eficiente.
@@ -451,8 +587,11 @@ Por ahora (2023) la IA puede darnos una aproximación a la solución de forma r�
 ## Referencias
 
 * [jutge.org: Problema P31958_es](https://jutge.org/problems/P31958_es)
+* [Uso de asistentes conversacionales en el aprendizaje de la programación](https://docs.google.com/presentation/d/180CYZCC6glc_j_4RDDtRhwtf8qFY8goUE1su0YWj4BE/edit#slide=id.g24ed1f0e761_0_6) Christopher Expósito-Izquierdo, Francisco de Sande González. JUTE23
 * [Repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics)
 * [Uso de Asistentes IA en concursos de Programación](https://computational-thinking.github.io/ia-assistant-olimpics/) C. León y C. Rodríguez. 2023.
+* [Large language models will change programming... a little](https://medium.com/bits-and-behavior/large-language-models-will-change-programming-a-little-81445778d957) by Amy J. Ko
+
 * **First Contact** 
   
   Sparks of AGI: early experiments with GPT-4 by Sebastien Bubeck
