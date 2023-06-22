@@ -532,7 +532,7 @@ Nótese como la respuesta a la lista sin blancos primera `1,4,99` produce una re
 
 **metaconversacion**
 
-[![/images/chatgpt-trainer.png](/images/chatgpt-trainer.png)](https://twitter.com/ElCopyMaster/status/1669749063024095245?s=20)
+[![/images/chatgpt-trainer.png](images/chatgpt-trainer.png)](https://twitter.com/ElCopyMaster/status/1669749063024095245?s=20)
 
 follow the link to see the **conversation**
 
