@@ -55,7 +55,7 @@ Para medir las capacidades de los asistentes IA planteamos un problema de las Ol
 
 ### Primer caso
 
-El primer ejemplo que puede encontrar en el fichero [input.txt](/input-examples/input.txt) es
+El primer ejemplo que puede encontrar en el fichero [input.txt](input-examples/input.txt) es
 
 ```
 10 6
@@ -84,7 +84,7 @@ Es fácil ver que es posible encontrar una solución con 5 hospitales.
 
 ### Segundo caso
 
-El segundo ejemplo que puede encontrar en el fichero [input2.txt](/input-examples/input2.txt) es 
+El segundo ejemplo que puede encontrar en el fichero [input2.txt](input-examples/input2.txt) es 
 
 ```
 9 8
@@ -116,7 +116,7 @@ Es posible encontrar una solución con 3 hospitales, poniéndolos en 0, 5 y 8.
 
 ### Tercer caso
 
-El tercer ejemplo que puede encontrar en el fichero [input3.txt](/input-examples/input3.txt) es 
+El tercer ejemplo que puede encontrar en el fichero [input3.txt](input-examples/input3.txt) es 
 
 ```
 5 4
@@ -591,7 +591,9 @@ Por ahora (2023) la IA puede darnos una aproximación a la solución de forma r�
 * [Repositorio Computational-Thinking/ia-assistant-olimpics](https://github.com/Computational-Thinking/ia-assistant-olimpics)
 * [Uso de Asistentes IA en concursos de Programación](https://computational-thinking.github.io/ia-assistant-olimpics/) C. León y C. Rodríguez. 2023.
 * [Large language models will change programming... a little](https://medium.com/bits-and-behavior/large-language-models-will-change-programming-a-little-81445778d957) by Amy J. Ko
-
+* AULA VIRTUA DEL [JUTE 2023](https://campus.fg.ull.es/course/view.php?id=400001548)
+  * [Simposio 3. Los asistentes de inteligencia artifical en el proceso de enseñanza-aprendizaje](https://campus.fg.ull.es/mod/page/view.php?id=99999&forceview=1)
+  * [Presentaciones del Simposio 3](https://drive.google.com/drive/folders/105vwrwsAO2NH0Yn_ZE4_1RkcAfxeSiTK?usp=sharing)
 * **First Contact** 
   
   Sparks of AGI: early experiments with GPT-4 by Sebastien Bubeck
